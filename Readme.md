@@ -44,7 +44,7 @@ ferreiragu84@gmail.com
 
 🚀 Como Executar
 Clone o repositório:
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+git clone: https://github.com/zKILLAyt/Portifolio
 Abra o projeto no VS Code
 Execute o index.html
 📸 Funcionalidades
