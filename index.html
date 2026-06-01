@@ -1,295 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gustavo Gomes | Portfólio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gustavo Gomes | Portfólio</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-</head>
-<body>
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container nav">
+        <h1 class="logo">Gustavo Gomes</h1>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav">
-      <h1 class="logo">Gustavo Gomes</h1>
-
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#projects">Projetos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container hero-content">
-
-      <div class="hero-text">
-        <span class="tag">Front-End Developer</span>
-
-        <h2>
-          Criando interfaces modernas e experiências digitais
-        </h2>
-
-        <p>
-          Olá, eu sou Gustavo Gomes. Desenvolvedor focado em
-          interfaces modernas, design responsivo e projetos web.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#projects" class="btn primary">
-            Ver Projetos
-          </a>
-
-          <a
-            href="https://github.com/zKILLAyt"
-            target="_blank"
-            class="btn secondary"
-          >
-            GitHub
-          </a>
-        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <div class="hero-card">
-        <div class="card-glow"></div>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="tag">Full Stack Developer</span>
 
-        <div class="card-content">
-          <i class="fa-solid fa-code"></i>
-
-          <h3>Front-End </h3>
+          <h2>
+            Criando aplicações web completas e escaláveis, com foco em
+            experiências digitais.
+          </h2>
 
           <p>
-            HTML, CSS, JavaScript e interfaces modernas.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
-
-      <div class="section-title">
-        <span>Sobre Mim</span>
-        <h2>Quem sou eu?</h2>
-      </div>
-
-      <div class="about-content">
-
-        <div class="about-text">
-          <p>
-            Sou estudante de Engenharia da Computação e apaixonado
-            por desenvolvimento web. Gosto de criar projetos modernos,
-            funcionais e com design limpo.
+            Olá, eu sou Gustavo Gomes. Desenvolvedor Full Stack focado em
+            aplicações web modernas, com experiência em interfaces responsivas,
+            construção de APIs e desenvolvimento de ponta a ponta, do front-end
+            ao back-end.
           </p>
 
-          <p>
-            Atualmente estou desenvolvendo projetos front-end
-            utilizando HTML, CSS e JavaScript.
-          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary"> Ver Projetos </a>
+
+            <a
+              href="https://github.com/zKILLAyt"
+              target="_blank"
+              class="btn secondary"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
 
-        <div class="skills">
+        <div class="hero-card">
+          <div class="card-glow"></div>
 
-          <div class="skill-card">
-            <i class="fa-brands fa-html5"></i>
-            <span>HTML5</span>
+          <div class="card-content">
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Full Stack</h3>
+
+            <p>JS, HTML, CSS, NODE.JS</p>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="skill-card">
-            <i class="fa-brands fa-css3-alt"></i>
-            <span>CSS3</span>
-          </div>
-
-          <div class="skill-card">
-            <i class="fa-brands fa-js"></i>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="skill-card">
-            <i class="fa-brands fa-github"></i>
-            <span>GitHub</span>
-          </div>
-
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <span>Sobre Mim</span>
+          <h2>Quem sou eu?</h2>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <div class="container">
-
-      <div class="section-title">
-        <span>Projetos</span>
-        <h2>Meus Projetos</h2>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- PETCARE -->
-        <div class="project-card">
-
-          <div class="project-image">
-            <i class="fa-solid fa-paw"></i>
-          </div>
-
-          <div class="project-info">
-            <h3>PetCare</h3>
-
+        <div class="about-content">
+          <div class="about-text">
             <p>
-              Projeto front-end moderno voltado para cuidados
-              e serviços para pets.
+              Sou estudante de Engenharia da Computação e apaixonado por
+              desenvolvimento de software. Gosto de criar aplicações web
+              completas, modernas e funcionais, atuando tanto no front-end
+              quanto no back-end.
             </p>
 
-            <div class="project-tech">
-              <span>HTML</span>
-              <span>CSS</span>
+            <p>
+              Atualmente estou desenvolvendo projetos full stack utilizando
+              HTML, CSS, JavaScript e tecnologias de back-end para construir
+              sistemas completos e escaláveis.
+            </p>
+          </div>
+
+          <div class="skills">
+            <div class="skill-card">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML5</span>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-node-js"></i>
+              <span>Node.js</span>
+            </div>
+
+            <div class="skill-card">
+              <i class="fa-brands fa-js"></i>
               <span>JavaScript</span>
             </div>
 
-            <a
-              href="https://github.com/zKILLAyt/PetCare"
-              target="_blank"
-              class="project-btn"
-            >
-              Ver Projeto
-            </a>
-          </div>
-
-        </div>
-
-        <!-- RESTAURANT -->
-        <div class="project-card">
-
-          <div class="project-image">
-            <i class="fa-solid fa-utensils"></i>
-          </div>
-
-          <div class="project-info">
-            <h3>Restaurant Website</h3>
-
-            <p>
-              Landing page moderna para restaurante com design elegante
-              e responsivo.
-            </p>
-
-            <div class="project-tech">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
+            <div class="skill-card">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
             </div>
-
-            <a
-              href="https://github.com/zKILLAyt/projetec-restaurant"
-              target="_blank"
-              class="project-btn"
-            >
-              Ver Projeto
-            </a>
           </div>
-
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <!-- CONTACT -->
-<section class="contact" id="contact">
-
+   <!-- PROJECTS -->
+<section class="projects" id="projects">
   <div class="container">
 
     <div class="section-title">
-      <span>Contato</span>
-      <h2>Vamos Conversar</h2>
+      <span>Projetos</span>
+      <h2>Meus Projetos</h2>
     </div>
 
-    <form class="contact-form" id="contact-form">
+    <div class="projects-grid">
 
-  <div class="input-group">
-    <input
-      type="text"
-      name="name"
-      placeholder="Seu nome"
-      required
-    />
-  </div>
+      <!-- PETCARE -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fa-solid fa-paw"></i>
+        </div>
 
-  <div class="input-group">
-    <input
-      type="email"
-      name="email"
-      placeholder="Seu email"
-      required
-    />
-  </div>
+        <div class="project-info">
+          <h3>PetCare</h3>
 
-  <div class="input-group">
-    <textarea
-      name="message"
-      placeholder="Digite sua mensagem..."
-      rows="6"
-      required
-    ></textarea>
-  </div>
+          <p>
+            Projeto front-end moderno voltado para cuidados e serviços para pets.
+          </p>
 
-  <button type="submit" class="btn primary">
-    Enviar Mensagem
-  </button>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
 
-</form>
+          <a href="https://github.com/zKILLAyt/PetCare" target="_blank" class="project-btn">
+            Ver Projeto
+          </a>
+        </div>
+      </div>
 
-  </div>
+      <!-- RESTAURANT -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
 
-</section>
+        <div class="project-info">
+          <h3>Restaurant Website</h3>
 
-    <div class="container footer-content">
+          <p>
+            Landing page moderna para restaurante com design elegante e responsivo.
+          </p>
 
-      <h2>zKILLA</h2>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
 
-      <p>
-        © 2026 - Todos os direitos reservados.
-      </p>
+          <a href="https://github.com/zKILLAyt/projetec-restaurant" target="_blank" class="project-btn">
+            Ver Projeto
+          </a>
+        </div>
+      </div>
 
-      <div class="socials">
+      <!-- BACK-END  -->
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fa-solid fa-server"></i>
+        </div>
 
-        <a
-          href="https://github.com/zKILLAyt"
-          target="_blank"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
+        <div class="project-info">
+          <h3>API de Estoque (Desenvolvimento)</h3>
 
+          <p>
+            API REST para controle de estoque com Node.js, Express e MongoDB.
+          </p>
+
+          <div class="project-tech">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+          </div>
+
+          <a href="https://github.com/zKILLAyt/estoque-api" target="_blank" class="project-btn">
+            Ver Projeto
+          </a>
+        </div>
       </div>
 
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script>
-  emailjs.init("7OpDP2lNBzEbjpLBw");
-</script>
-  <script src="script.js"></script>
-</body>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="section-title">
+            <span>Contato</span>
+            <h2>Vamos Conversar</h2>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="input-group">
+              <input type="text" name="name" placeholder="Seu nome" required />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Seu email"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <textarea
+                name="message"
+                placeholder="Digite sua mensagem..."
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn primary">Enviar Mensagem</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="container footer-content">
+        <h2>zKILLA</h2>
+
+        <p>© 2026 - Todos os direitos reservados.</p>
+
+        <div class="socials">
+          <a href="https://github.com/zKILLAyt" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+      emailjs.init("7OpDP2lNBzEbjpLBw");
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
-
