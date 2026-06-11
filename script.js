@@ -40,6 +40,30 @@ window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
 /* =========================
+   PROJECT TABS
+========================= */
+
+const projectTabs = document.querySelectorAll(".project-tab");
+const projectCards = document.querySelectorAll(".project-card");
+
+projectTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const selectedCategory = tab.dataset.category;
+
+    projectTabs.forEach((item) => {
+      const isActive = item === tab;
+
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-selected", isActive);
+    });
+
+    projectCards.forEach((card) => {
+      card.hidden = card.dataset.category !== selectedCategory;
+    });
+  });
+});
+
+/* =========================
    ACTIVE NAVIGATION LINK
 ========================= */
 
