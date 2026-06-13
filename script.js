@@ -21,7 +21,7 @@ window.addEventListener("scroll", () => {
 ========================= */
 
 const revealElements = document.querySelectorAll(
-  ".hero-text, .hero-card, .about-text, .skill-card, .project-card"
+  ".hero-text, .hero-card, .about-text, .skill-card, .project-card, .contact-intro, .contact-panel"
 );
 
 function revealOnScroll() {
@@ -38,6 +38,112 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+/* =========================
+   ANIMATED TECH BACKGROUND
+========================= */
+
+const backgroundCanvas = document.getElementById("tech-background");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (backgroundCanvas && !reduceMotion) {
+  const context = backgroundCanvas.getContext("2d");
+  const particles = [];
+  const pointer = { x: null, y: null };
+  let animationFrame;
+
+  function resizeBackground() {
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+
+    backgroundCanvas.width = window.innerWidth * pixelRatio;
+    backgroundCanvas.height = window.innerHeight * pixelRatio;
+    backgroundCanvas.style.width = `${window.innerWidth}px`;
+    backgroundCanvas.style.height = `${window.innerHeight}px`;
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+    const particleCount = Math.min(75, Math.floor(window.innerWidth / 18));
+    particles.length = 0;
+
+    for (let index = 0; index < particleCount; index += 1) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        radius: Math.random() * 1.4 + 0.5,
+        speedX: (Math.random() - 0.5) * 0.24,
+        speedY: (Math.random() - 0.5) * 0.24,
+      });
+    }
+  }
+
+  function drawBackground() {
+    context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+    particles.forEach((particle, index) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+
+      if (particle.x < 0 || particle.x > window.innerWidth) particle.speedX *= -1;
+      if (particle.y < 0 || particle.y > window.innerHeight) particle.speedY *= -1;
+
+      context.beginPath();
+      context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+      context.fillStyle = "rgba(184, 140, 255, 0.65)";
+      context.fill();
+
+      particles.slice(index + 1).forEach((otherParticle) => {
+        const distance = Math.hypot(
+          particle.x - otherParticle.x,
+          particle.y - otherParticle.y
+        );
+
+        if (distance < 115) {
+          context.beginPath();
+          context.moveTo(particle.x, particle.y);
+          context.lineTo(otherParticle.x, otherParticle.y);
+          context.strokeStyle = `rgba(125, 91, 190, ${0.13 * (1 - distance / 115)})`;
+          context.stroke();
+        }
+      });
+
+      if (pointer.x !== null) {
+        const pointerDistance = Math.hypot(
+          particle.x - pointer.x,
+          particle.y - pointer.y
+        );
+
+        if (pointerDistance < 150) {
+          context.beginPath();
+          context.moveTo(particle.x, particle.y);
+          context.lineTo(pointer.x, pointer.y);
+          context.strokeStyle = `rgba(66, 232, 224, ${0.22 * (1 - pointerDistance / 150)})`;
+          context.stroke();
+        }
+      }
+    });
+
+    animationFrame = requestAnimationFrame(drawBackground);
+  }
+
+  window.addEventListener("resize", resizeBackground);
+  window.addEventListener("mousemove", (event) => {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+  });
+  document.addEventListener("mouseleave", () => {
+    pointer.x = null;
+    pointer.y = null;
+  });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      cancelAnimationFrame(animationFrame);
+    } else {
+      drawBackground();
+    }
+  });
+
+  resizeBackground();
+  drawBackground();
+}
 
 /* =========================
    PROJECT TABS
@@ -200,6 +306,8 @@ window.addEventListener("mousemove", (e) => {
 
   const glow = document.querySelector(".card-glow");
 
+  if (!glow || reduceMotion) return;
+
   const x = (window.innerWidth - e.pageX * 2) / 90;
   const y = (window.innerHeight - e.pageY * 2) / 90;
 
@@ -212,10 +320,20 @@ window.addEventListener("mousemove", (e) => {
 ========================= */
 
 const form = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
 
-form.addEventListener("submit", function (e) {
+form?.addEventListener("submit", function (e) {
 
   e.preventDefault();
+
+  const submitButton = form.querySelector(".contact-submit");
+  const buttonText = submitButton.querySelector("span");
+  const originalText = buttonText.textContent;
+
+  submitButton.disabled = true;
+  buttonText.textContent = "Enviando...";
+  formStatus.className = "form-status";
+  formStatus.textContent = "Conectando e enviando sua mensagem...";
 
   emailjs.sendForm(
     "service_a3p1w2n",
@@ -224,17 +342,21 @@ form.addEventListener("submit", function (e) {
   )
   .then(() => {
 
-    alert("Mensagem enviada com sucesso 🚀");
-
     form.reset();
+    formStatus.className = "form-status success";
+    formStatus.textContent = "Mensagem enviada com sucesso. Em breve entrarei em contato!";
 
   })
   .catch((error) => {
 
-    alert("Erro ao enviar mensagem 😢");
-
+    formStatus.className = "form-status error";
+    formStatus.textContent = "Não foi possível enviar agora. Tente novamente em alguns instantes.";
     console.log(error);
 
+  })
+  .finally(() => {
+    submitButton.disabled = false;
+    buttonText.textContent = originalText;
   });
 
 });

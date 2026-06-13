@@ -13,6 +13,10 @@
     />
   </head>
   <body>
+    <canvas class="tech-background" id="tech-background" aria-hidden="true"></canvas>
+    <div class="ambient-glow ambient-glow-one" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-two" aria-hidden="true"></div>
+
     <!-- HEADER -->
     <header class="header">
       <div class="container nav">
@@ -23,6 +27,7 @@
             <li><a href="#home">Início</a></li>
             <li><a href="#about">Sobre</a></li>
             <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
           </ul>
         </nav>
       </div>
@@ -33,6 +38,11 @@
       <div class="container hero-content">
         <div class="hero-text">
           <span class="tag">Full Stack Developer</span>
+
+          <div class="system-status" aria-label="Status profissional">
+            <span class="status-dot"></span>
+            <span>Disponivel para novos projetos</span>
+          </div>
 
           <h2>
             Criando aplicações web completas e escaláveis, com foco em
@@ -61,8 +71,13 @@
 
         <div class="hero-card">
           <div class="card-glow"></div>
+          <span class="tech-corner corner-top-left"></span>
+          <span class="tech-corner corner-top-right"></span>
+          <span class="tech-corner corner-bottom-left"></span>
+          <span class="tech-corner corner-bottom-right"></span>
 
           <div class="card-content">
+            <span class="code-label">&lt;developer /&gt;</span>
             <i class="fa-solid fa-code"></i>
 
             <h3>Full Stack</h3>
@@ -294,47 +309,148 @@
       <section class="contact" id="contact">
         <div class="container">
           <div class="section-title">
-            <span>Contato</span>
-            <h2>Vamos Conversar</h2>
+            <span>Vamos criar algo juntos</span>
+            <h2>Entre em Contato</h2>
+            <p>
+              Tem uma ideia, oportunidade ou projeto em mente? Envie uma
+              mensagem e vamos conversar sobre como transformar isso em código.
+            </p>
           </div>
 
-          <form class="contact-form" id="contact-form">
-            <div class="input-group">
-              <input type="text" name="name" placeholder="Seu nome" required />
+          <div class="contact-layout">
+            <div class="contact-intro">
+              <span class="contact-label">Conexão direta</span>
+              <h3>Pronto para o próximo desafio.</h3>
+              <p>
+                Estou aberto a projetos, colaborações e oportunidades em
+                desenvolvimento web.
+              </p>
+
+              <div class="contact-highlights">
+                <div class="contact-highlight">
+                  <span class="contact-icon">
+                    <i class="fa-solid fa-code"></i>
+                  </span>
+                  <div>
+                    <strong>Desenvolvimento Full Stack</strong>
+                    <span>Interfaces modernas e APIs robustas</span>
+                  </div>
+                </div>
+
+                <div class="contact-highlight">
+                  <span class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </span>
+                  <div>
+                    <strong>Brasil</strong>
+                    <span>Disponível para projetos remotos</span>
+                  </div>
+                </div>
+
+                <div class="contact-highlight">
+                  <span class="contact-icon">
+                    <i class="fa-brands fa-github"></i>
+                  </span>
+                  <div>
+                    <strong>GitHub</strong>
+                    <a href="https://github.com/zKILLAyt" target="_blank" rel="noopener noreferrer">
+                      github.com/zKILLAyt
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="input-group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Seu email"
-                required
-              />
-            </div>
+            <div class="contact-panel">
+              <div class="panel-header">
+                <div class="panel-dots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span>nova_mensagem.js</span>
+                <span class="panel-status">online</span>
+              </div>
 
-            <div class="input-group">
-              <textarea
-                name="message"
-                placeholder="Digite sua mensagem..."
-                rows="6"
-                required
-              ></textarea>
-            </div>
+              <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                  <div class="input-group">
+                    <label for="contact-name">Nome</label>
+                    <div class="input-control">
+                      <i class="fa-regular fa-user"></i>
+                      <input
+                        id="contact-name"
+                        type="text"
+                        name="name"
+                        placeholder="Como posso te chamar?"
+                        required
+                      />
+                    </div>
+                  </div>
 
-            <button type="submit" class="btn primary">Enviar Mensagem</button>
-          </form>
+                  <div class="input-group">
+                    <label for="contact-email">E-mail</label>
+                    <div class="input-control">
+                      <i class="fa-regular fa-envelope"></i>
+                      <input
+                        id="contact-email"
+                        type="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="contact-message">Mensagem</label>
+                  <div class="input-control textarea-control">
+                    <i class="fa-regular fa-message"></i>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      placeholder="Conte um pouco sobre sua ideia ou projeto..."
+                      rows="6"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn primary contact-submit">
+                  <span>Enviar Mensagem</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div class="container footer-content">
-        <h2>zKILLA</h2>
+      <div class="footer-bottom">
+        <div class="container footer-content">
+          <div class="footer-brand">
+            <h2>Gustavo Gomes</h2>
+            <p>Desenvolvendo experiências digitais, uma linha de cada vez.</p>
+          </div>
 
-        <p>© 2026 - Todos os direitos reservados.</p>
+          <p class="footer-copy">© 2026 Gustavo Gomes. Todos os direitos reservados.</p>
 
-        <div class="socials">
-          <a href="https://github.com/zKILLAyt" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
+          <div class="socials">
+            <a
+              href="https://github.com/zKILLAyt"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Acessar GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#home" aria-label="Voltar ao início">
+              <i class="fa-solid fa-arrow-up"></i>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
