@@ -1,68 +1,103 @@
-Portfólio Front-End 🚀
+# Gustavo Gomes | Portfólio Full Stack
 
-Portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e contato profissional.
+Portfólio pessoal desenvolvido para apresentar minha trajetória, habilidades e
+projetos como desenvolvedor Full Stack.
 
-O projeto foi criado utilizando apenas tecnologias front-end, com foco em design moderno, responsividade e experiência do usuário.
+O site utiliza uma identidade visual moderna e tecnológica, com tema escuro,
+detalhes em roxo e ciano, animações interativas e uma experiência totalmente
+responsiva.
 
-✨ Preview
+## Demonstração
 
-O portfólio possui:
+Acesse o projeto publicado:
 
-https://zkillayt.github.io/Portifolio/
+**[zkillayt.github.io/Portifolio](https://zkillayt.github.io/Portifolio/)**
 
-Hero section moderna
-Sobre mim
-Cards de projetos
-Formulário funcional com EmailJS
-Design responsivo
-Tema dark com detalhes em roxo
-🛠️ Tecnologias Utilizadas
-HTML5
-CSS3
-JavaScript
-EmailJS
-Font Awesome
-📂 Projetos Apresentados
-🐾 PetCare
+## Sobre o projeto
 
-Projeto front-end moderno voltado para cuidados e serviços para pets.
+O portfólio foi construído com HTML, CSS e JavaScript puro. A página apresenta:
 
-🔗 Repositório:
-PetCare GitHub
+- Hero tecnológico com painel de código e terminal animado
+- Seção "Sobre mim" com perfil profissional e stack de tecnologias
+- Projetos separados em abas de Front-end e Back-end
+- Cards interativos com efeitos de brilho e animações
+- Formulário de contato integrado ao EmailJS
+- Navegação responsiva e acessível
+- Fundo tecnológico animado
 
-🍽️ Restaurant Website
+## Tecnologias
 
-Landing page moderna para restaurante com design elegante e responsivo.
+- HTML5
+- CSS3
+- JavaScript
+- EmailJS
+- Font Awesome
+- Git e GitHub
 
-🔗 Repositório:
-Restaurant GitHub
+## Projetos apresentados
 
-📧 Contato
+### Front-end
 
-O formulário do portfólio está integrado com EmailJS para envio de mensagens diretamente para meu email.
+| Projeto | Descrição | Repositório |
+| --- | --- | --- |
+| PetCare | Interface moderna voltada para cuidados e serviços para pets. | [GitHub](https://github.com/zKILLAyt/PetCare) |
+| Restaurant Website | Landing page responsiva para restaurante com design elegante. | [GitHub](https://github.com/zKILLAyt/projetec-restaurant) |
+| HabitQuest | Gerenciador de hábitos gamificado com XP, níveis e sequência de dias. | [GitHub](https://github.com/zKILLAyt/HabitQuest) |
 
-📩 Email:
-ferreiragu84@gmail.com
+### Back-end
 
-🚀 Como Executar
-Clone o repositório:
-git clone: https://github.com/zKILLAyt/Portifolio
-Abra o projeto no VS Code
-Execute o index.html
-📸 Funcionalidades
+| Projeto | Descrição | Repositório |
+| --- | --- | --- |
+| API de Estoque | API REST para gerenciamento de estoque com Node.js, Express e MongoDB. | [GitHub](https://github.com/zKILLAyt/estoque-api) |
+| HelpDesk API | API REST com usuários, autenticação JWT, rotas protegidas e MySQL. | [GitHub](https://github.com/zKILLAyt/helpdesk-api) |
 
-✅ Layout moderno
-✅ Responsivo
-✅ Animações suaves
-✅ Efeito hover nos cards
-✅ Navegação suave
-✅ Formulário funcional
-✅ Integração com EmailJS
+## Funcionalidades
 
-👨‍💻 Desenvolvido por
+- Layout moderno e responsivo
+- Abas para filtragem dos projetos
+- Animações de entrada e efeitos de hover
+- Navegação suave entre as seções
+- Destaque automático do item ativo no menu
+- Navegação das abas pelo teclado
+- Formulário funcional com feedback de envio
+- Integração com EmailJS
+- Respeito à preferência de redução de movimento do sistema
 
-Gustavo Gomes
-zKILLA
+## Como executar
 
-🔗 GitHub:
-zKILLAyt GitHub
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/zKILLAyt/Portifolio.git
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd Portifolio
+```
+
+3. Abra o arquivo `index.html` no navegador.
+
+O projeto não exige instalação de dependências ou processo de build.
+
+## Estrutura
+
+```text
+Portifolio/
+├── index.html
+├── style.css
+├── script.js
+└── Readme.md
+```
+
+## Contato
+
+**Gustavo Gomes**
+
+- GitHub: [github.com/zKILLAyt](https://github.com/zKILLAyt)
+- E-mail: [ferreiragu84@gmail.com](mailto:ferreiragu84@gmail.com)
+
+---
+
+Desenvolvido por Gustavo Gomes.

@@ -161,11 +161,40 @@ projectTabs.forEach((tab) => {
 
       item.classList.toggle("active", isActive);
       item.setAttribute("aria-selected", isActive);
+      item.setAttribute("tabindex", isActive ? "0" : "-1");
     });
 
     projectCards.forEach((card) => {
       card.hidden = card.dataset.category !== selectedCategory;
     });
+  });
+
+  tab.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+
+    event.preventDefault();
+    const currentIndex = [...projectTabs].indexOf(tab);
+    const direction = event.key === "ArrowRight" ? 1 : -1;
+    const nextIndex = (currentIndex + direction + projectTabs.length) % projectTabs.length;
+
+    projectTabs[nextIndex].focus();
+    projectTabs[nextIndex].click();
+  });
+});
+
+projectCards.forEach((card) => {
+  card.addEventListener("mousemove", (event) => {
+    const bounds = card.getBoundingClientRect();
+    const mouseX = ((event.clientX - bounds.left) / bounds.width) * 100;
+    const mouseY = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+    card.style.setProperty("--mouse-x", `${mouseX}%`);
+    card.style.setProperty("--mouse-y", `${mouseY}%`);
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.setProperty("--mouse-x", "50%");
+    card.style.setProperty("--mouse-y", "50%");
   });
 });
 
@@ -275,28 +304,23 @@ buttons.forEach((button) => {
    TYPEWRITER EFFECT
 ========================= */
 
-const heroTitle = document.querySelector(".hero-text h2");
-
-const text = "Criando interfaces modernas e experiências digitais";
+const heroTypewriter = document.querySelector(".hero-typewriter");
+const text = "npm run create-future";
 
 let index = 0;
 
 function typeWriter() {
-
-  if (index < text.length) {
-
-    heroTitle.innerHTML += text.charAt(index);
-
+  if (heroTypewriter && index < text.length) {
+    heroTypewriter.textContent += text.charAt(index);
     index++;
-
-    setTimeout(typeWriter, 40);
-
+    setTimeout(typeWriter, 55);
   }
 }
 
-heroTitle.innerHTML = "";
-
-window.addEventListener("load", typeWriter);
+if (heroTypewriter) {
+  heroTypewriter.textContent = "";
+  window.addEventListener("load", typeWriter);
+}
 
 /* =========================
    PARALLAX EFFECT
