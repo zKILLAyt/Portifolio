@@ -3109,3 +3109,24 @@ section {
     height: 38px;
   }
 }
+
+/* =========================
+   GITHUB PROJECTS / CYBERSECURITY
+========================= */
+.nav-links a .nav-development {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.project-btn-disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.cyber-project-card .project-status {
+  color: #b88cff;
+}
