@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://gustavo-portfolio-api-qzrk.onrender.com/api";
 
 const token = localStorage.getItem("adminToken");
 
