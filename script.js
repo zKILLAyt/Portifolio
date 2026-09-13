@@ -390,7 +390,7 @@ console.log(`
    TESTIMONIALS / FEEDBACK
 ========================= */
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://gustavo-portfolio-api-qzrk.onrender.com/api";
 
 const testimonialsGrid = document.getElementById("testimonials-grid");
 const feedbackModal = document.getElementById("feedback-modal");
