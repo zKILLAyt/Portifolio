@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Painel de Feedbacks</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="admin-dashboard">
+      <header class="admin-header">
+        <div>
+          <h1>📋 Feedbacks</h1>
+          <p>Painel administrativo</p>
+        </div>
+
+        <button id="logoutButton">Sair</button>
+      </header>
+
+      <section class="feedback-dashboard">
+        <div class="dashboard-title">
+          <h2>Feedbacks pendentes</h2>
+
+          <span id="pendingCount"> 0 </span>
+        </div>
+
+        <div id="feedbackList">
+          <p id="loadingMessage">Carregando feedbacks...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="admin-dashboard.js"></script>
+  </body>
+</html>
