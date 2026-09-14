@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://portifolio-one-blue-37.vercel.app/">🌐 Acessar portfólio</a>
+  <a href="gustavogomes.dev.br">🌐 Acessar portfólio</a>
   ·
   <a href="https://github.com/zKILLAyt">GitHub</a>
 </p>
@@ -35,11 +35,7 @@ O portfólio também possui uma área de **CyberSecurity — em desenvolvimento*
 
 ### Portfólio publicado
 
-**https://portifolio-one-blue-37.vercel.app/**
-
-### Seção CyberSecurity
-
-**https://portifolio-one-blue-37.vercel.app/#cybersecurity**
+**gustavogomes.dev.br**
 
 ### API
 
