@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="gustavogomes.dev.br">🌐 Acessar portfólio</a>
+  <a href="https://www.gustavogomes.dev.br/">🌐 Acessar portfólio</a>
   ·
   <a href="https://github.com/zKILLAyt">GitHub</a>
 </p>
@@ -35,7 +35,7 @@ O portfólio também possui uma área de **CyberSecurity — em desenvolvimento*
 
 ### Portfólio publicado
 
-**gustavogomes.dev.br**
+**https://www.gustavogomes.dev.br/**
 
 ### API
 
