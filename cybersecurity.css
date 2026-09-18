@@ -2884,6 +2884,267 @@ body::after {
 }
 
 /* =========================================================
+   SECURITY LAB
+   ========================================================= */
+
+.security-lab {
+  position: relative;
+  padding: 120px 0;
+  border-top: 1px solid rgba(139, 92, 246, 0.07);
+}
+
+.security-lab-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.security-lab-header h2 {
+  margin-top: 10px;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.security-lab-header h2 strong {
+  color: var(--saturn-purple-light);
+}
+
+.security-lab-header p {
+  max-width: 650px;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.lab-local-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 145px;
+  padding: 13px 16px;
+  border: 1px solid rgba(34, 211, 238, 0.14);
+  border-radius: 10px;
+  background: rgba(34, 211, 238, 0.025);
+}
+
+.lab-status-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--security-green);
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.55);
+}
+
+.lab-local-status div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lab-local-status span:not(.lab-status-dot) {
+  color: var(--text-muted);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+}
+
+.lab-local-status strong {
+  color: var(--security-green);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.security-lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Cards stay in a balanced 2-column grid. Tool panels remain full-width below the grid. */
+.security-lab-grid .lab-tool-card {
+  min-width: 0;
+}
+
+.lab-tool-card {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.045), rgba(7, 7, 18, 0.82));
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lab-tool-card::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 90px;
+  right: -100px;
+  top: -35px;
+  border: 1px solid rgba(34, 211, 238, 0.08);
+  border-radius: 50%;
+  transform: rotate(-24deg);
+}
+
+.lab-tool-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--security-cyan), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.lab-tool-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.34);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28), 0 0 35px rgba(139, 92, 246, 0.06);
+}
+
+.lab-tool-card:hover::after {
+  transform: translateX(100%);
+}
+
+.lab-tool-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.lab-tool-index {
+  color: var(--security-cyan);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.lab-tool-status {
+  padding: 5px 8px;
+  border: 1px solid rgba(52, 211, 153, 0.16);
+  border-radius: 5px;
+  color: var(--security-green);
+  background: rgba(52, 211, 153, 0.035);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.48rem;
+  letter-spacing: 0.1em;
+}
+
+.lab-tool-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border: 1px solid rgba(34, 211, 238, 0.15);
+  border-radius: 12px;
+  background: rgba(34, 211, 238, 0.035);
+  color: var(--security-cyan);
+  font-size: 1.05rem;
+}
+
+.lab-tool-card h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.lab-tool-card h3 strong {
+  color: var(--saturn-purple-light);
+}
+
+.lab-tool-card p {
+  max-width: 560px;
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.lab-tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.lab-tool-tags span {
+  padding: 6px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.security-lab-footer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.012);
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.62rem;
+}
+
+.security-lab-footer i {
+  color: var(--security-green);
+}
+
+.lab-footer-code {
+  margin-left: auto;
+  color: rgba(34, 211, 238, 0.45);
+}
+
+@media (max-width: 700px) {
+  .security-lab-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .security-lab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-local-status {
+    width: 100%;
+  }
+
+  .security-lab-footer {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .lab-footer-code {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* =========================================================
    SECURITY ARSENAL
    ========================================================= */
 
@@ -3671,3 +3932,522 @@ body::after {
     line-height: 1.6;
   }
 }
+
+
+/* =====================================================
+   SECURITY LAB — PASSWORD ANALYZER
+   ===================================================== */
+
+.lab-tool-card-action { cursor: pointer; }
+.lab-tool-card-action:focus-visible { outline: 2px solid var(--cyan, #00e5ff); outline-offset: 4px; }
+.password-analyzer-panel {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid rgba(0, 229, 255, .28);
+  background: rgba(5, 10, 18, .82);
+  box-shadow: inset 0 0 28px rgba(0, 229, 255, .035);
+}
+.password-analyzer-panel[hidden] { display: none; }
+.password-analyzer-head, .password-score-meta, .password-strength-row {
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+}
+.password-analyzer-head h3 { margin: 8px 0 0; }
+.lab-close-btn, .password-toggle-btn {
+  border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.03); color: inherit;
+  cursor:pointer; min-width:44px; min-height:44px; transition:.2s ease;
+}
+.lab-close-btn:hover, .password-toggle-btn:hover { border-color: rgba(0,229,255,.55); color:#00e5ff; }
+.password-input-wrap { margin-top: 24px; }
+.password-input-wrap label { display:block; margin-bottom:8px; font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; opacity:.7; }
+.password-input-row { display:flex; gap:8px; }
+.password-input-row input { flex:1; min-width:0; border:1px solid rgba(255,255,255,.14); background:rgba(0,0,0,.32); color:inherit; padding:14px 16px; font:inherit; outline:none; }
+.password-input-row input:focus { border-color:rgba(0,229,255,.65); }
+.password-score-block { margin-top:24px; }
+.password-score-meta span, .password-strength-row { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; }
+.password-score-meta strong { font-size:1.1rem; }
+.password-score-bar { height:8px; margin:10px 0; background:rgba(255,255,255,.08); overflow:hidden; }
+.password-score-bar span { display:block; width:0; height:100%; transition:width .25s ease; background:#00e5ff; }
+.password-strength-row { opacity:.72; }
+.password-metrics { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:22px; }
+.password-metric { padding:14px; border:1px solid rgba(255,255,255,.09); background:rgba(255,255,255,.025); }
+.password-metric span { display:block; font-size:.68rem; opacity:.6; text-transform:uppercase; letter-spacing:.08em; }
+.password-metric strong { display:block; margin-top:7px; font-size:1rem; }
+.password-feedback { margin-top:16px; padding:14px; border-left:2px solid rgba(0,229,255,.55); background:rgba(0,229,255,.035); font-size:.85rem; line-height:1.55; }
+@media (max-width: 700px) {
+  .password-analyzer-panel { padding:20px; }
+  .password-metrics { grid-template-columns:repeat(2,1fr); }
+  .password-strength-row { align-items:flex-start; flex-direction:column; gap:6px; }
+}
+
+
+/* =========================================================
+   SECURITY LAB — HASH GENERATOR
+   ========================================================= */
+
+.lab-tool-card-action {
+  cursor: pointer;
+}
+
+.lab-tool-card-action:focus-visible,
+.hash-copy-btn:focus-visible,
+.hash-generate-btn:focus-visible,
+.hash-generator-panel button:focus-visible,
+.hash-generator-panel textarea:focus-visible,
+.hash-generator-panel select:focus-visible {
+  outline: 2px solid var(--security-cyan);
+  outline-offset: 3px;
+}
+
+.hash-generator-panel {
+  margin-top: 18px;
+  padding: 30px;
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(34, 211, 238, 0.035), rgba(7, 7, 18, 0.88));
+}
+
+.hash-generator-panel[hidden] {
+  display: none;
+}
+
+.hash-generator-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.hash-generator-head h3 {
+  margin-top: 9px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.25rem;
+}
+
+.hash-generator-head h3 strong {
+  color: var(--saturn-purple-light);
+}
+
+.hash-input-meta,
+.hash-result-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 9px;
+}
+
+.hash-input-wrap label,
+.hash-controls label {
+  color: var(--text-muted);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+}
+
+#hash-char-count {
+  color: rgba(34, 211, 238, 0.55);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.55rem;
+}
+
+#hash-lab-input {
+  width: 100%;
+  resize: vertical;
+  min-height: 125px;
+  padding: 15px;
+  border: 1px solid rgba(139, 92, 246, 0.16);
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+#hash-lab-input::placeholder {
+  color: var(--text-muted);
+}
+
+.hash-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+#hash-algorithm {
+  min-height: 43px;
+  padding: 0 13px;
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  color: var(--text-primary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+}
+
+.hash-generate-btn,
+.hash-copy-btn {
+  min-height: 43px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 8px;
+  background: rgba(34, 211, 238, 0.05);
+  color: var(--security-cyan);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.hash-generate-btn {
+  padding: 0 16px;
+  margin-left: auto;
+}
+
+.hash-copy-btn {
+  padding: 0 12px;
+}
+
+.hash-generate-btn:hover,
+.hash-copy-btn:not(:disabled):hover {
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(34, 211, 238, 0.09);
+}
+
+.hash-copy-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.hash-result-block {
+  margin-top: 18px;
+  padding: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.hash-result-meta {
+  margin-bottom: 12px;
+}
+
+#hash-result-label {
+  color: var(--text-muted);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.09em;
+}
+
+#hash-result {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--security-green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.hash-feedback {
+  min-height: 22px;
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.58rem;
+}
+
+@media (max-width: 700px) {
+  .hash-generator-panel {
+    padding: 22px;
+  }
+
+  .hash-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hash-generate-btn {
+    margin-left: 0;
+  }
+
+  #hash-algorithm,
+  .hash-generate-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SECURITY LAB — JWT DECODER
+   ========================================================= */
+.jwt-decoder-panel {
+  margin-top: 18px;
+  padding: 30px;
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(34, 211, 238, 0.035), rgba(7, 7, 18, 0.88));
+}
+
+.jwt-decoder-panel[hidden] { display: none; }
+.jwt-decoder-head { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:28px; }
+.jwt-decoder-head h3 { margin-top:9px; font-family:"Orbitron",sans-serif; font-size:1.25rem; }
+.jwt-decoder-head h3 strong { color:var(--saturn-purple-light); }
+.jwt-input-meta, .jwt-output-title { display:flex; justify-content:space-between; align-items:center; gap:15px; }
+.jwt-input-meta { margin-bottom:9px; }
+.jwt-input-meta label { color:var(--text-muted); font-family:"Orbitron",sans-serif; font-size:.55rem; letter-spacing:.1em; }
+#jwt-char-count { color:rgba(34,211,238,.55); font-family:"JetBrains Mono",monospace; font-size:.55rem; }
+#jwt-lab-input { width:100%; resize:vertical; min-height:145px; padding:15px; border:1px solid rgba(139,92,246,.16); border-radius:9px; background:rgba(0,0,0,.22); color:var(--text-primary); font-family:"JetBrains Mono",monospace; font-size:.72rem; line-height:1.65; }
+#jwt-lab-input::placeholder { color:var(--text-muted); }
+#jwt-lab-input:focus-visible, .jwt-decoder-panel button:focus-visible { outline:2px solid var(--security-cyan); outline-offset:3px; }
+.jwt-actions { display:flex; gap:10px; margin-top:16px; }
+.jwt-decode-btn, .jwt-clear-btn { min-height:43px; padding:0 15px; border:1px solid rgba(34,211,238,.2); border-radius:8px; background:rgba(34,211,238,.05); color:var(--security-cyan); font-family:"Orbitron",sans-serif; font-size:.58rem; letter-spacing:.06em; cursor:pointer; transition:.25s ease; }
+.jwt-decode-btn:hover, .jwt-clear-btn:hover { border-color:rgba(34,211,238,.45); background:rgba(34,211,238,.09); }
+.jwt-clear-btn { color:var(--text-muted); border-color:rgba(255,255,255,.1); }
+.jwt-status { min-height:22px; margin-top:10px; color:var(--text-muted); font-family:"JetBrains Mono",monospace; font-size:.58rem; }
+.jwt-output-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px; }
+.jwt-output-block, .jwt-signature-block { min-width:0; padding:16px; border:1px solid rgba(255,255,255,.06); border-radius:9px; background:rgba(0,0,0,.22); }
+.jwt-output-title { margin-bottom:12px; color:var(--text-muted); font-family:"Orbitron",sans-serif; font-size:.55rem; letter-spacing:.09em; }
+.jwt-output-title span:last-child { color:rgba(34,211,238,.55); font-family:"JetBrains Mono",monospace; font-size:.5rem; }
+.jwt-output-block pre { margin:0; overflow:auto; white-space:pre-wrap; overflow-wrap:anywhere; color:var(--security-green); font-family:"JetBrains Mono",monospace; font-size:.68rem; line-height:1.65; }
+.jwt-signature-block { margin-top:14px; }
+.jwt-signature-block code { display:block; overflow-wrap:anywhere; color:var(--text-muted); font-family:"JetBrains Mono",monospace; font-size:.66rem; line-height:1.65; }
+@media (max-width:700px) {
+  .jwt-decoder-panel { padding:22px; }
+  .jwt-output-grid { grid-template-columns:1fr; }
+  .jwt-actions { flex-direction:column; }
+}
+
+
+/* =========================================================
+   SECURITY LAB — BASE64 TOOL
+   ========================================================= */
+.base64-tool-panel{margin-top:18px;padding:28px;border:1px solid rgba(34,211,238,.14);border-radius:12px;background:rgba(0,0,0,.24)}.base64-tool-panel[hidden]{display:none}.base64-tool-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:22px}.base64-tool-head h3{margin:7px 0 0;font-family:"Orbitron",sans-serif;font-size:1.15rem;letter-spacing:.04em;color:var(--text-primary)}.base64-tool-head h3 strong{color:var(--security-cyan)}.base64-mode-row{display:flex;gap:8px;margin-bottom:16px}.base64-mode-btn{min-height:40px;padding:0 16px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.025);color:var(--text-muted);font-family:"Orbitron",sans-serif;font-size:.56rem;letter-spacing:.08em;cursor:pointer;transition:.25s ease}.base64-mode-btn:hover,.base64-mode-btn.is-active{border-color:rgba(34,211,238,.4);color:var(--security-cyan);background:rgba(34,211,238,.07)}.base64-input-meta,.base64-result-meta{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:9px}.base64-input-meta label,.base64-result-meta span{color:var(--text-muted);font-family:"Orbitron",sans-serif;font-size:.55rem;letter-spacing:.08em}#base64-char-count{color:rgba(34,211,238,.55);font-family:"JetBrains Mono",monospace;font-size:.52rem}#base64-lab-input{width:100%;min-height:145px;resize:vertical;padding:15px;border:1px solid rgba(139,92,246,.16);border-radius:9px;background:rgba(0,0,0,.22);color:var(--text-primary);font-family:"JetBrains Mono",monospace;font-size:.72rem;line-height:1.65}#base64-lab-input::placeholder{color:var(--text-muted)}#base64-lab-input:focus-visible,.base64-tool-panel button:focus-visible{outline:2px solid var(--security-cyan);outline-offset:3px}.base64-actions{display:flex;gap:10px;margin-top:16px}.base64-run-btn,.base64-clear-btn{min-height:43px;padding:0 15px;border:1px solid rgba(34,211,238,.2);border-radius:8px;background:rgba(34,211,238,.05);color:var(--security-cyan);font-family:"Orbitron",sans-serif;font-size:.58rem;letter-spacing:.06em;cursor:pointer;transition:.25s ease}.base64-run-btn:hover,.base64-clear-btn:hover{border-color:rgba(34,211,238,.45);background:rgba(34,211,238,.09)}.base64-clear-btn{color:var(--text-muted);border-color:rgba(255,255,255,.1)}.base64-result-block{margin-top:16px;padding:16px;border:1px solid rgba(255,255,255,.06);border-radius:9px;background:rgba(0,0,0,.22)}.base64-copy-btn{min-height:34px;padding:0 11px;border:1px solid rgba(34,211,238,.18);border-radius:7px;background:rgba(34,211,238,.04);color:var(--security-cyan);font-family:"Orbitron",sans-serif;font-size:.5rem;letter-spacing:.06em;cursor:pointer}.base64-copy-btn:disabled{opacity:.4;cursor:not-allowed}#base64-result{display:block;min-height:28px;overflow:auto;overflow-wrap:anywhere;white-space:pre-wrap;color:var(--security-green);font-family:"JetBrains Mono",monospace;font-size:.68rem;line-height:1.65}.base64-feedback{min-height:22px;margin-top:10px;color:var(--text-muted);font-family:"JetBrains Mono",monospace;font-size:.58rem}@media(max-width:700px){.base64-tool-panel{padding:22px}.base64-tool-head{gap:10px}.base64-actions{flex-direction:column}.base64-mode-row{flex-wrap:wrap}}
+
+/* =====================================================
+   SECURITY LAB — IP / CIDR CALCULATOR
+   ===================================================== */
+.ip-calculator-panel {
+  margin-top: 18px;
+  padding: 28px;
+  border: 1px solid rgba(0, 229, 255, .14);
+  border-radius: 18px;
+  background: rgba(4, 7, 18, .72);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+.ip-calculator-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.ip-calculator-head h3 {
+  margin: 8px 0 0;
+}
+
+.ip-input-wrap {
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  background: rgba(255,255,255,.018);
+}
+
+.ip-input-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.ip-input-meta label {
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.72);
+}
+
+.ip-input-meta span {
+  font-size: .68rem;
+  color: rgba(0,229,255,.65);
+}
+
+.ip-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+#ip-lab-input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 15px;
+  border: 1px solid rgba(0,229,255,.12);
+  border-radius: 10px;
+  outline: none;
+  background: rgba(0,0,0,.3);
+  color: #fff;
+  font: inherit;
+  font-family: monospace;
+}
+
+#ip-lab-input:focus {
+  border-color: rgba(0,229,255,.5);
+  box-shadow: 0 0 0 3px rgba(0,229,255,.07);
+}
+
+.ip-calculate-btn,
+.ip-clear-btn,
+.ip-presets button {
+  border: 1px solid rgba(0,229,255,.18);
+  border-radius: 9px;
+  background: rgba(0,229,255,.05);
+  color: #dffcff;
+  font: inherit;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.ip-calculate-btn,
+.ip-clear-btn {
+  min-height: 46px;
+  padding: 0 16px;
+}
+
+.ip-calculate-btn:hover,
+.ip-clear-btn:hover,
+.ip-presets button:hover {
+  border-color: rgba(0,229,255,.45);
+  background: rgba(0,229,255,.1);
+}
+
+.ip-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.ip-presets button {
+  padding: 8px 11px;
+  font-size: .68rem;
+  font-family: monospace;
+}
+
+.ip-status {
+  min-height: 22px;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,.58);
+  font-size: .78rem;
+}
+
+.ip-result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ip-result-card,
+.ip-detail-row > div {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 12px;
+  background: rgba(255,255,255,.018);
+}
+
+.ip-result-card span,
+.ip-detail-row span {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(0,229,255,.62);
+  font-size: .62rem;
+  letter-spacing: .1em;
+}
+
+.ip-result-card strong,
+.ip-detail-row strong {
+  display: block;
+  overflow-wrap: anywhere;
+  color: rgba(255,255,255,.9);
+  font-size: .9rem;
+  font-family: monospace;
+}
+
+.ip-detail-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ip-calculator-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+@media (max-width: 760px) {
+  .ip-calculator-panel { padding: 20px; }
+  .ip-input-row { grid-template-columns: 1fr; }
+  .ip-result-grid,
+  .ip-detail-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 460px) {
+  .ip-input-meta { align-items: flex-start; flex-direction: column; }
+  .ip-result-grid,
+  .ip-detail-row { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   SECURITY LAB — SECURITY HEADERS ANALYZER
+   ========================================================= */
+.security-headers-panel{margin-top:18px;padding:28px;border:1px solid rgba(34,211,238,.14);border-radius:18px;background:rgba(4,7,18,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+.security-headers-panel[hidden]{display:none}
+.security-headers-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px}
+.security-headers-head h3{margin:8px 0 0;font-family:"Orbitron",sans-serif;font-size:1.15rem;letter-spacing:.04em;color:var(--text-primary)}
+.security-headers-head h3 strong{color:var(--security-cyan)}
+.headers-mode-row{display:flex;gap:8px;margin-bottom:16px}
+.headers-mode-btn{min-height:40px;padding:0 15px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.025);color:var(--text-muted);font-family:"Orbitron",sans-serif;font-size:.56rem;letter-spacing:.08em;cursor:pointer;transition:.25s ease}
+.headers-mode-btn:hover,.headers-mode-btn.is-active{border-color:rgba(34,211,238,.4);color:var(--security-cyan);background:rgba(34,211,238,.07)}
+.headers-input-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px}
+.headers-input-meta label{color:var(--text-muted);font-family:"Orbitron",sans-serif;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase}
+.headers-input-meta span{color:rgba(34,211,238,.55);font-family:"JetBrains Mono",monospace;font-size:.54rem}
+.headers-input-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}
+#headers-url-input,#headers-manual-input{width:100%;min-width:0;border:1px solid rgba(139,92,246,.16);border-radius:9px;background:rgba(0,0,0,.24);color:var(--text-primary);font-family:"JetBrains Mono",monospace;font-size:.7rem;line-height:1.65;outline:none}
+#headers-url-input{min-height:46px;padding:0 14px}
+#headers-manual-input{min-height:155px;padding:14px;resize:vertical}
+#headers-url-input:focus-visible,#headers-manual-input:focus-visible,.security-headers-panel button:focus-visible{outline:2px solid var(--security-cyan);outline-offset:3px}
+.headers-analyze-btn,.headers-clear-btn{min-height:44px;padding:0 15px;border:1px solid rgba(34,211,238,.2);border-radius:8px;background:rgba(34,211,238,.05);color:var(--security-cyan);font-family:"Orbitron",sans-serif;font-size:.56rem;letter-spacing:.06em;cursor:pointer;transition:.25s ease}
+.headers-analyze-btn:hover,.headers-clear-btn:hover{border-color:rgba(34,211,238,.45);background:rgba(34,211,238,.09)}
+.headers-analyze-btn:disabled{opacity:.55;cursor:wait}
+.headers-clear-btn{color:var(--text-muted);border-color:rgba(255,255,255,.1)}
+.headers-manual-actions{display:flex;gap:10px;margin-top:12px}
+.headers-status{min-height:22px;margin:12px 0 16px;color:var(--text-muted);font-family:"JetBrains Mono",monospace;font-size:.58rem}
+.headers-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.headers-summary>div{padding:14px;border:1px solid rgba(255,255,255,.07);border-radius:10px;background:rgba(255,255,255,.018)}
+.headers-summary span{display:block;margin-bottom:7px;color:var(--text-muted);font-family:"Orbitron",sans-serif;font-size:.52rem;letter-spacing:.08em}
+.headers-summary strong{font-family:"JetBrains Mono",monospace;font-size:1rem;color:var(--security-cyan)}
+.headers-results{display:grid;gap:10px}
+.headers-result-row{display:grid;grid-template-columns:38px minmax(0,1fr);gap:13px;padding:15px;border:1px solid rgba(255,255,255,.07);border-radius:10px;background:rgba(0,0,0,.2)}
+.headers-result-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:8px;border:1px solid rgba(255,255,255,.08);font-family:"JetBrains Mono",monospace;font-weight:700}
+.headers-result-main{min-width:0}
+.headers-result-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.headers-result-title strong{color:var(--text-primary);font-family:"JetBrains Mono",monospace;font-size:.72rem;overflow-wrap:anywhere}
+.headers-result-title span{font-family:"Orbitron",sans-serif;font-size:.5rem;letter-spacing:.07em;white-space:nowrap}
+.headers-result-main p{margin:7px 0;color:var(--text-muted);font-size:.68rem;line-height:1.6}
+.headers-result-main code{display:block;overflow:auto;overflow-wrap:anywhere;color:rgba(255,255,255,.68);font-family:"JetBrains Mono",monospace;font-size:.59rem;line-height:1.55}
+.headers-result-row.state-secure .headers-result-icon{color:var(--security-green);border-color:rgba(52,211,153,.22);background:rgba(52,211,153,.05)}
+.headers-result-row.state-secure .headers-result-title span{color:var(--security-green)}
+.headers-result-row.state-review .headers-result-icon{color:#fbbf24;border-color:rgba(251,191,36,.22);background:rgba(251,191,36,.05)}
+.headers-result-row.state-review .headers-result-title span{color:#fbbf24}
+.headers-result-row.state-missing .headers-result-icon{color:#fb7185;border-color:rgba(251,113,133,.22);background:rgba(251,113,133,.05)}
+.headers-result-row.state-missing .headers-result-title span{color:#fb7185}
+.headers-note{display:flex;align-items:flex-start;gap:9px;margin-top:14px;padding:12px 14px;border:1px solid rgba(139,92,246,.1);border-radius:9px;background:rgba(139,92,246,.025);color:var(--text-muted);font-family:"JetBrains Mono",monospace;font-size:.55rem;line-height:1.6}
+.headers-note i{color:var(--security-cyan);margin-top:2px}
+@media(max-width:760px){.security-headers-panel{padding:20px}.headers-input-row{grid-template-columns:1fr}.headers-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.headers-manual-actions{flex-direction:column}.headers-result-title{align-items:flex-start;flex-direction:column;gap:6px}}
+@media(max-width:460px){.headers-summary{grid-template-columns:1fr}.headers-mode-row{flex-wrap:wrap}}

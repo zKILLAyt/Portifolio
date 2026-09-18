@@ -629,6 +629,345 @@
       </section>
 
       <!-- =====================================================
+     SECURITY LAB
+     ===================================================== -->
+
+      <section class="security-lab" id="security-lab">
+        <div class="container">
+          <div class="security-lab-header">
+            <div>
+              <span class="security-section-label">
+                <i class="fa-solid fa-flask"></i>
+                SATTURNO // SECURITY LAB
+              </span>
+
+              <h2>Security <strong>Lab</strong></h2>
+
+              <p>
+                Ferramentas práticas para análise, exploração controlada e
+                aprendizado em segurança digital.
+              </p>
+            </div>
+
+            <div class="lab-local-status">
+              <span class="lab-status-dot"></span>
+
+              <div>
+                <span>PROCESSING MODE</span>
+                <strong>LOCAL</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="security-lab-grid">
+            <article class="lab-tool-card lab-tool-card-action" data-open-password tabindex="0" role="button" aria-label="Abrir Password Analyzer">
+              <div class="lab-tool-top">
+                <span class="lab-tool-index">01</span>
+                <span class="lab-tool-status">READY</span>
+              </div>
+
+              <div class="lab-tool-icon">
+                <i class="fa-solid fa-key"></i>
+              </div>
+
+              <h3>Password <strong>Analyzer</strong></h3>
+
+              <p>
+                Avalie força, comprimento, complexidade e entropia de uma
+                senha sem enviá-la para um servidor.
+              </p>
+
+              <div class="lab-tool-tags">
+                <span>LOCAL</span>
+                <span>ENTROPY</span>
+                <span>STRENGTH</span>
+              </div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-hash tabindex="0" role="button" aria-label="Abrir Hash Generator">
+              <div class="lab-tool-top">
+                <span class="lab-tool-index">02</span>
+                <span class="lab-tool-status">READY</span>
+              </div>
+
+              <div class="lab-tool-icon">
+                <i class="fa-solid fa-hashtag"></i>
+              </div>
+
+              <h3>Hash <strong>Generator</strong></h3>
+
+              <p>
+                Gere hashes criptográficos usando a Web Crypto API diretamente
+                no navegador.
+              </p>
+
+              <div class="lab-tool-tags">
+                <span>SHA-256</span>
+                <span>SHA-384</span>
+                <span>SHA-512</span>
+              </div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-jwt tabindex="0" role="button" aria-label="Abrir JWT Decoder">
+              <div class="lab-tool-top">
+                <span class="lab-tool-index">03</span>
+                <span class="lab-tool-status">READY</span>
+              </div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-key"></i></div>
+              <h3>JWT <strong>Decoder</strong></h3>
+              <p>Decodifique Header e Payload de JSON Web Tokens localmente, sem validar ou quebrar assinaturas.</p>
+              <div class="lab-tool-tags"><span>LOCAL</span><span>HEADER</span><span>PAYLOAD</span></div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-base64 tabindex="0" role="button" aria-label="Abrir Base64 Encoder Decoder">
+              <div class="lab-tool-top"><span class="lab-tool-index">04</span><span class="lab-tool-status">READY</span></div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Base64 <strong>Tool</strong></h3>
+              <p>Codifique e decodifique texto em Base64 com suporte a UTF-8 diretamente no navegador.</p>
+              <div class="lab-tool-tags"><span>LOCAL</span><span>UTF-8</span><span>ENCODE</span><span>DECODE</span></div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-ip tabindex="0" role="button" aria-label="Abrir IP e CIDR Calculator">
+              <div class="lab-tool-top"><span class="lab-tool-index">05</span><span class="lab-tool-status">READY</span></div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h3>IP / CIDR <strong>Calculator</strong></h3>
+              <p>Calcule rede, broadcast, faixa de hosts e capacidade de uma sub-rede IPv4 localmente.</p>
+              <div class="lab-tool-tags"><span>LOCAL</span><span>IPv4</span><span>CIDR</span><span>NETWORK</span></div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-headers tabindex="0" role="button" aria-label="Abrir Security Headers Analyzer">
+              <div class="lab-tool-top"><span class="lab-tool-index">06</span><span class="lab-tool-status">READY</span></div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3>Security <strong>Headers</strong></h3>
+              <p>Analise headers HTTP de segurança e identifique proteções presentes, ausentes ou configuradas para revisão.</p>
+              <div class="lab-tool-tags"><span>HTTP</span><span>HEADERS</span><span>LOCAL</span><span>CORS</span></div>
+            </article>
+          </div>
+
+          <div class="jwt-decoder-panel" id="jwt-decoder-panel" hidden>
+            <div class="jwt-decoder-head">
+              <div><span class="lab-tool-index">03 // DECODER</span><h3>JWT <strong>Decoder</strong></h3></div>
+              <button class="lab-close-btn" type="button" data-close-jwt aria-label="Fechar JWT Decoder"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="jwt-input-wrap">
+              <div class="jwt-input-meta"><label for="jwt-lab-input">JSON Web Token</label><span id="jwt-char-count">0 caracteres</span></div>
+              <textarea id="jwt-lab-input" rows="7" spellcheck="false" placeholder="Cole um JWT no formato header.payload.signature..."></textarea>
+            </div>
+            <div class="jwt-actions">
+              <button type="button" class="jwt-decode-btn" id="jwt-decode-btn"><i class="fa-solid fa-code"></i> DECODE JWT</button>
+              <button type="button" class="jwt-clear-btn" id="jwt-clear-btn"><i class="fa-solid fa-eraser"></i> CLEAR</button>
+            </div>
+            <div class="jwt-status" id="jwt-status" aria-live="polite">Os dados permanecem no navegador.</div>
+            <div class="jwt-output-grid">
+              <div class="jwt-output-block"><div class="jwt-output-title"><span>HEADER</span><span id="jwt-header-status">WAITING</span></div><pre id="jwt-header-output">Aguardando token...</pre></div>
+              <div class="jwt-output-block"><div class="jwt-output-title"><span>PAYLOAD</span><span id="jwt-payload-status">WAITING</span></div><pre id="jwt-payload-output">Aguardando token...</pre></div>
+            </div>
+            <div class="jwt-signature-block"><div class="jwt-output-title"><span>SIGNATURE</span><span id="jwt-signature-status">NOT VERIFIED</span></div><code id="jwt-signature-output">A assinatura é exibida apenas para referência.</code></div>
+          </div>
+
+          <div class="password-analyzer-panel" id="password-analyzer-panel" hidden>
+            <div class="password-analyzer-head">
+              <div>
+                <span class="lab-tool-index">01 // ANALYZER</span>
+                <h3>Password <strong>Analyzer</strong></h3>
+              </div>
+              <button class="lab-close-btn" type="button" data-close-password aria-label="Fechar Password Analyzer">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="password-input-wrap">
+              <label for="password-lab-input">Digite uma senha para analisar</label>
+              <div class="password-input-row">
+                <input id="password-lab-input" type="password" autocomplete="off" spellcheck="false" placeholder="Digite uma senha...">
+                <button type="button" class="password-toggle-btn" data-toggle-password aria-label="Mostrar senha">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="password-score-block">
+              <div class="password-score-meta">
+                <span>SECURITY SCORE</span>
+                <strong id="password-score">0 / 100</strong>
+              </div>
+              <div class="password-score-bar"><span id="password-score-fill"></span></div>
+              <div class="password-strength-row">
+                <span id="password-strength">AGUARDANDO INPUT</span>
+                <span id="password-entropy">Entropy: 0 bits</span>
+              </div>
+            </div>
+
+            <div class="password-metrics" aria-live="polite">
+              <div class="password-metric"><span>Length</span><strong id="metric-length">0</strong></div>
+              <div class="password-metric"><span>Uppercase</span><strong id="metric-upper">✕</strong></div>
+              <div class="password-metric"><span>Lowercase</span><strong id="metric-lower">✕</strong></div>
+              <div class="password-metric"><span>Numbers</span><strong id="metric-number">✕</strong></div>
+              <div class="password-metric"><span>Symbols</span><strong id="metric-symbol">✕</strong></div>
+            </div>
+
+            <div class="password-feedback" id="password-feedback">Digite uma senha para iniciar a análise.</div>
+          </div>
+
+          <div class="hash-generator-panel" id="hash-generator-panel" hidden>
+            <div class="hash-generator-head">
+              <div>
+                <span class="lab-tool-index">02 // GENERATOR</span>
+                <h3>Hash <strong>Generator</strong></h3>
+              </div>
+              <button class="lab-close-btn" type="button" data-close-hash aria-label="Fechar Hash Generator">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="hash-input-wrap">
+              <div class="hash-input-meta">
+                <label for="hash-lab-input">Texto para gerar o hash</label>
+                <span id="hash-char-count">0 caracteres</span>
+              </div>
+              <textarea id="hash-lab-input" rows="5" spellcheck="false" placeholder="Digite ou cole um texto..."></textarea>
+            </div>
+
+            <div class="hash-controls">
+              <label for="hash-algorithm">ALGORITHM</label>
+              <select id="hash-algorithm">
+                <option value="SHA-256">SHA-256</option>
+                <option value="SHA-384">SHA-384</option>
+                <option value="SHA-512">SHA-512</option>
+              </select>
+              <button type="button" class="hash-generate-btn" id="hash-generate-btn">
+                <i class="fa-solid fa-bolt"></i> GENERATE HASH
+              </button>
+            </div>
+
+            <div class="hash-result-block">
+              <div class="hash-result-meta">
+                <span id="hash-result-label">SHA-256 OUTPUT</span>
+                <button type="button" class="hash-copy-btn" id="hash-copy-btn" disabled>
+                  <i class="fa-regular fa-copy"></i> COPY
+                </button>
+              </div>
+              <code id="hash-result">Aguardando entrada...</code>
+            </div>
+            <div class="hash-feedback" id="hash-feedback" aria-live="polite">Os dados permanecem no navegador.</div>
+          </div>
+
+            </div>
+
+            <div class="base64-tool-panel" id="base64-tool-panel" hidden>
+              <div class="base64-tool-head"><div><span class="lab-tool-index">04 // ENCODER / DECODER</span><h3>Base64 <strong>Tool</strong></h3></div><button class="lab-close-btn" type="button" data-close-base64 aria-label="Fechar Base64 Tool"><i class="fa-solid fa-xmark"></i></button></div>
+              <div class="base64-mode-row" role="group" aria-label="Modo Base64"><button type="button" class="base64-mode-btn is-active" data-base64-mode="encode">ENCODE</button><button type="button" class="base64-mode-btn" data-base64-mode="decode">DECODE</button></div>
+              <div class="base64-input-wrap"><div class="base64-input-meta"><label for="base64-lab-input">Texto de entrada</label><span id="base64-char-count">0 caracteres</span></div><textarea id="base64-lab-input" rows="6" spellcheck="false" placeholder="Digite o texto que deseja codificar..."></textarea></div>
+              <div class="base64-actions"><button type="button" class="base64-run-btn" id="base64-run-btn"><i class="fa-solid fa-bolt"></i> ENCODE</button><button type="button" class="base64-clear-btn" id="base64-clear-btn"><i class="fa-solid fa-eraser"></i> CLEAR</button></div>
+              <div class="base64-result-block"><div class="base64-result-meta"><span id="base64-result-label">BASE64 OUTPUT</span><button type="button" class="base64-copy-btn" id="base64-copy-btn" disabled><i class="fa-regular fa-copy"></i> COPY</button></div><code id="base64-result">Aguardando entrada...</code></div>
+              <div class="base64-feedback" id="base64-feedback" aria-live="polite">Os dados permanecem no navegador.</div>
+          </div>
+
+          <div class="ip-calculator-panel" id="ip-calculator-panel" hidden>
+            <div class="ip-calculator-head">
+              <div><span class="lab-tool-index">05 // NETWORK TOOL</span><h3>IP / CIDR <strong>Calculator</strong></h3></div>
+              <button class="lab-close-btn" type="button" data-close-ip aria-label="Fechar IP / CIDR Calculator"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="ip-input-wrap">
+              <div class="ip-input-meta"><label for="ip-lab-input">IPv4 address / CIDR</label><span id="ip-input-status">Ex.: 192.168.1.10/24</span></div>
+              <div class="ip-input-row">
+                <input id="ip-lab-input" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="192.168.1.10/24">
+                <button type="button" class="ip-calculate-btn" id="ip-calculate-btn"><i class="fa-solid fa-calculator"></i> CALCULATE</button>
+              </div>
+            </div>
+
+            <div class="ip-presets" aria-label="Exemplos rápidos">
+              <button type="button" data-ip-preset="192.168.1.10/24">192.168.1.10/24</button>
+              <button type="button" data-ip-preset="10.0.0.15/16">10.0.0.15/16</button>
+              <button type="button" data-ip-preset="172.16.5.20/28">172.16.5.20/28</button>
+            </div>
+
+            <div class="ip-status" id="ip-status" aria-live="polite">Digite um IPv4 com CIDR para iniciar o cálculo.</div>
+
+            <div class="ip-result-grid" aria-live="polite">
+              <div class="ip-result-card"><span>NETWORK</span><strong id="ip-network">—</strong></div>
+              <div class="ip-result-card"><span>BROADCAST</span><strong id="ip-broadcast">—</strong></div>
+              <div class="ip-result-card"><span>FIRST HOST</span><strong id="ip-first-host">—</strong></div>
+              <div class="ip-result-card"><span>LAST HOST</span><strong id="ip-last-host">—</strong></div>
+              <div class="ip-result-card"><span>SUBNET MASK</span><strong id="ip-mask">—</strong></div>
+              <div class="ip-result-card"><span>HOSTS</span><strong id="ip-host-count">—</strong></div>
+            </div>
+
+            <div class="ip-detail-row">
+              <div><span>CIDR</span><strong id="ip-cidr">—</strong></div>
+              <div><span>TOTAL ADDRESSES</span><strong id="ip-total">—</strong></div>
+              <div><span>WILDCARD</span><strong id="ip-wildcard">—</strong></div>
+            </div>
+
+            <div class="ip-calculator-actions">
+              <button type="button" class="ip-clear-btn" id="ip-clear-btn"><i class="fa-solid fa-eraser"></i> CLEAR</button>
+            </div>
+          </div>
+
+          <div class="security-headers-panel" id="security-headers-panel" hidden>
+            <div class="security-headers-head">
+              <div>
+                <span class="lab-tool-index">06 // HTTP ANALYZER</span>
+                <h3>Security <strong>Headers</strong></h3>
+              </div>
+              <button class="lab-close-btn" type="button" data-close-headers aria-label="Fechar Security Headers Analyzer"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="headers-mode-row" role="group" aria-label="Modo de análise">
+              <button type="button" class="headers-mode-btn is-active" data-headers-mode="url">ANALYZE URL</button>
+              <button type="button" class="headers-mode-btn" data-headers-mode="manual">PASTE HEADERS</button>
+            </div>
+
+            <div class="headers-url-panel" data-headers-view="url">
+              <div class="headers-input-meta">
+                <label for="headers-url-input">Public URL</label>
+                <span>Ex.: https://example.com</span>
+              </div>
+              <div class="headers-input-row">
+                <input id="headers-url-input" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://example.com">
+                <button type="button" class="headers-analyze-btn" id="headers-analyze-btn"><i class="fa-solid fa-magnifying-glass"></i> ANALYZE</button>
+              </div>
+            </div>
+
+            <div class="headers-manual-panel" data-headers-view="manual" hidden>
+              <div class="headers-input-meta">
+                <label for="headers-manual-input">HTTP Response Headers</label>
+                <span>Cole os headers aqui</span>
+              </div>
+              <textarea id="headers-manual-input" rows="8" spellcheck="false" placeholder="Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: default-src 'self'
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Referrer-Policy: strict-origin-when-cross-origin"></textarea>
+              <div class="headers-manual-actions">
+                <button type="button" class="headers-analyze-btn" id="headers-manual-analyze-btn"><i class="fa-solid fa-list-check"></i> ANALYZE HEADERS</button>
+                <button type="button" class="headers-clear-btn" id="headers-clear-btn"><i class="fa-solid fa-eraser"></i> CLEAR</button>
+              </div>
+            </div>
+
+            <div class="headers-status" id="headers-status" aria-live="polite">Escolha um modo e inicie a análise.</div>
+
+            <div class="headers-summary" id="headers-summary" hidden>
+              <div><span>SECURE</span><strong id="headers-secure-count">0</strong></div>
+              <div><span>REVIEW</span><strong id="headers-review-count">0</strong></div>
+              <div><span>MISSING</span><strong id="headers-missing-count">0</strong></div>
+              <div><span>SCORE</span><strong id="headers-score">0%</strong></div>
+            </div>
+
+            <div class="headers-results" id="headers-results" aria-live="polite"></div>
+            <div class="headers-note"><i class="fa-solid fa-circle-info"></i><span>O modo URL depende de CORS e dos headers expostos pelo servidor. Se o navegador bloquear o acesso, use PASTE HEADERS para análise local.</span></div>
+          </div>
+
+          <div class="security-lab-footer">
+            <i class="fa-solid fa-lock"></i>
+            <span>Dados processados localmente nesta primeira versão.</span>
+            <span class="lab-footer-code">SAT-SEC // LAB-01</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
      SECURITY ARSENAL
      ===================================================== -->
 
