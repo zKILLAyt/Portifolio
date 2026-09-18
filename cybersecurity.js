@@ -1357,8 +1357,6 @@ const SatturnoTerminal = (() => {
   /* =====================================================
        START
        ===================================================== */
-
-  input.focus();
-
+   
   console.log("%c[ SATTURNO TERMINAL ]", "color:#00e5ff;font-weight:bold");
 })();
