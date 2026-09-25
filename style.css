@@ -2846,6 +2846,11 @@ section {
   overflow: hidden;
 }
 
+.testimonials h2 {
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(155, 92, 255, 0.15);
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
