@@ -2846,9 +2846,10 @@ section {
   overflow: hidden;
 }
 
-.testimonials h2 {
+.section-title h2 {
+  font-size: 42px;
+  margin-top: 10px;
   color: #ffffff;
-  text-shadow: 0 0 18px rgba(155, 92, 255, 0.15);
 }
 
 .testimonials-grid {
