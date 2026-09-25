@@ -549,9 +549,19 @@ async function loadTestimonials() {
 
   try {
     testimonialsGrid.innerHTML = `
-      <p>
-        Carregando depoimentos...
-      </p>
+      <div class="testimonials-loading">
+        <div class="loading-track">
+          <div class="loading-point"></div>
+
+          <div class="loading-ship">
+            🚀
+          </div>
+
+          <div class="loading-point"></div>
+        </div>
+
+        <p>Carregando depoimentos...</p>
+      </div>
     `;
 
     const response = await fetch(`${API_URL}/feedbacks`);
