@@ -2,6 +2,8 @@
 
 Portfólio estático de Gustavo Gomes, estudante de Engenharia da Computação e desenvolvedor. O site apresenta projetos, estudos de CyberSecurity e opções de contato direto.
 
+-- Link: https://www.gustavogomes.dev.br/
+
 ## Conteúdo
 
 - `index.html`: apresentação, stack, projetos e contato.
