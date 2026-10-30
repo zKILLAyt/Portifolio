@@ -1,0 +1,1550 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Estudos e ferramentas de cibersegurança de Gustavo Gomes, com foco em segurança web, redes e laboratórios práticos." />
+    <meta name="theme-color" content="#090909" />
+    <meta name="fragment" content="!">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+    <title>Saturno Security Scanner | Gustavo Gomes</title>
+
+    <!-- CSS exclusivo da página -->
+    <link rel="stylesheet" href="assets/css/cybersecurity.css?v=20261030-scanner" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <!-- BACKGROUND -->
+    <canvas class="cyber-background" id="cyber-background" aria-hidden="true">
+    </canvas>
+
+    <div class="cyber-glow cyber-glow-one" aria-hidden="true"></div>
+    <div class="cyber-glow cyber-glow-two" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="logo"> &lt;/Gustavo Gomes&gt; </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation-list">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="primary-navigation" aria-label="Navegação principal">
+          <ul class="nav-links" id="primary-navigation-list">
+            <li>
+              <a href="index.html"> Início </a>
+            </li>
+
+            <li>
+              <a href="index.html#about"> Sobre </a>
+            </li>
+
+            <li>
+              <a href="index.html#projects"> Projetos </a>
+            </li>
+
+            <li>
+              <a href="cybersecurity.html" class="active"> CyberSecurity </a>
+            </li>
+
+            <li>
+              <a href="index.html#contact"> Contato </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO CYBERSECURITY -->
+    <main id="main-content">
+      <section class="cyber-hero">
+        <div class="container">
+          <div class="cyber-hero-grid">
+            <!-- ==========================================
+                 HERO CONTENT
+                 ========================================== -->
+
+            <div class="cyber-hero-content">
+              <div class="cyber-badge">
+                <span class="security-indicator"></span>
+
+                SATURNO SECURITY
+              </div>
+
+              <p class="cyber-terminal">
+                <span>&gt;</span>
+                passive_security_analysis // browser-only
+              </p>
+
+              <h1>
+                SATURNO
+                <strong>SECURITY</strong>
+              </h1>
+
+              <p class="cyber-description">
+                Security Scanner — analise configurações de segurança, políticas HTTP e exposição de informações de websites.
+              </p>
+
+              <div class="cyber-system-status">
+                <div class="system-status-item">
+                  <span class="status-dot"></span>
+
+                  <span> URL ANALYSIS </span>
+
+                  <strong> PASSIVE </strong>
+                </div>
+
+                <div class="system-status-item">
+                  <span class="status-dot"></span>
+
+                  <span> HEADERS </span>
+
+                  <strong> HTTP </strong>
+                </div>
+
+                <div class="system-status-item">
+                  <span class="status-dot"></span>
+
+                  <span> TOOL </span>
+
+                  <strong> LOCAL </strong>
+                </div>
+              </div>
+
+              <div class="cyber-buttons">
+                <a href="#security-lab" class="btn primary">
+                  <span> Abrir scanner </span>
+
+                  <i class="fa-solid fa-arrow-down"></i>
+                </a>
+
+                <a href="index.html" class="btn secondary">
+                  <i class="fa-solid fa-arrow-left"></i>
+
+                  <span> Portfólio </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- ==========================================
+                 ORBITAL MONITOR
+                 ========================================== -->
+
+            <div class="orbital-monitor">
+              <div class="monitor-header">
+                <div>
+                  <span class="monitor-label"> SATURNO SECURITY </span>
+
+                  <span class="monitor-id"> SAT-01 // SECURITY </span>
+                </div>
+
+                <span class="monitor-live"> LIVE </span>
+              </div>
+
+              <div class="orbital-system">
+                <!-- ORBITS -->
+
+                <div class="orbit orbit-one"></div>
+
+                <div class="orbit orbit-two"></div>
+
+                <div class="orbit orbit-three"></div>
+
+                <!-- SATURN -->
+
+                <div class="saturn-core">
+                  <div class="saturn-body"></div>
+
+                  <div class="saturn-ring"></div>
+                </div>
+
+                <!-- ORBITAL NODES -->
+
+                <span class="orbital-node node-one"></span>
+
+                <span class="orbital-node node-two"></span>
+
+                <span class="orbital-node node-three"></span>
+
+                <!-- SCAN -->
+
+                <div class="monitor-scan"></div>
+              </div>
+
+              <div class="monitor-data">
+                <div>
+                  <span> TARGET </span>
+
+                  <strong> PASSIVE SCANNER </strong>
+                </div>
+
+                <div>
+                  <span> STATUS </span>
+
+                  <strong class="online"> READY </strong>
+                </div>
+
+                <div>
+                  <span> THREAT </span>
+
+                  <strong> GET ONLY </strong>
+                </div>
+
+                <div>
+                  <span> UPTIME </span>
+
+                  <strong> LOCAL FIRST </strong>
+                </div>
+              </div>
+
+              <div class="monitor-footer">
+                <span>
+                  <i class="fa-solid fa-shield-halved"></i>
+
+                  SECURITY REVIEW READY
+                </span>
+
+                <span> SAT-SEC </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     SECURITY OPERATIONS CENTER
+     ===================================================== -->
+
+      <section class="security-center" id="security-center">
+        <div class="container">
+          <!-- HEADER -->
+
+          <div class="security-center-header">
+            <div>
+              <span class="security-section-label">
+                <i class="fa-solid fa-satellite-dish"></i>
+                SATURNO // SECURITY CENTER
+              </span>
+
+              <h2>
+                Security
+                <strong>Operations</strong>
+              </h2>
+
+              <p>
+                Ferramentas locais e avaliações passivas para apoiar revisões de segurança web.
+              </p>
+            </div>
+
+            <div class="center-status">
+              <span class="center-status-dot"></span>
+
+              <div>
+                <span> SYSTEM STATUS </span>
+
+                <strong> READY </strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- STATUS BAR -->
+
+          <div class="security-status-grid">
+            <!-- SYSTEM -->
+
+            <div class="status-panel">
+              <div class="status-panel-top">
+                <span> SYSTEM </span>
+
+                <i class="fa-solid fa-server"></i>
+              </div>
+
+              <strong class="status-value"> ONLINE </strong>
+
+              <div class="status-line">
+                <span></span>
+              </div>
+
+              <small> All systems operational </small>
+            </div>
+
+            <!-- NETWORK -->
+
+            <div class="status-panel">
+              <div class="status-panel-top">
+                <span> NETWORK </span>
+
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+
+              <strong class="status-value"> SECURE </strong>
+
+              <div class="status-line">
+                <span></span>
+              </div>
+
+              <small> Network integrity verified </small>
+            </div>
+
+            <!-- SECURITY -->
+
+            <div class="status-panel">
+              <div class="status-panel-top">
+                <span> SECURITY </span>
+
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <strong class="status-value"> ACTIVE </strong>
+
+              <div class="status-line">
+                <span></span>
+              </div>
+
+              <small> Security protocols active </small>
+            </div>
+
+            <!-- THREAT -->
+
+            <div class="status-panel">
+              <div class="status-panel-top">
+                <span> THREAT LEVEL </span>
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+
+              <strong class="status-value safe"> LOW </strong>
+
+              <div class="status-line">
+                <span></span>
+              </div>
+
+              <small> No active threats detected </small>
+            </div>
+          </div>
+
+          <!-- MAIN DASHBOARD -->
+
+          <div class="security-dashboard">
+            <!-- =================================================
+                 SECURITY MODULES
+                 ================================================= -->
+
+            <div class="security-module-panel">
+              <div class="dashboard-panel-header">
+                <div>
+                  <span> SECURITY MODULES </span>
+
+                  <small> SAT-SEC / MODULES </small>
+                </div>
+
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+
+              <div class="module-list">
+                <!-- LINUX -->
+
+                <div class="module-item">
+                  <div class="module-icon">
+                    <i class="fa-brands fa-linux"></i>
+                  </div>
+
+                  <div class="module-info">
+                    <strong> Linux </strong>
+
+                    <span> System Security </span>
+                  </div>
+
+                  <span class="module-status"> ACTIVE </span>
+                </div>
+
+                <!-- NETWORK -->
+
+                <div class="module-item">
+                  <div class="module-icon">
+                    <i class="fa-solid fa-network-wired"></i>
+                  </div>
+
+                  <div class="module-info">
+                    <strong> Networks </strong>
+
+                    <span> Infrastructure </span>
+                  </div>
+
+                  <span class="module-status"> ACTIVE </span>
+                </div>
+
+                <!-- WEB -->
+
+                <div class="module-item">
+                  <div class="module-icon">
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+
+                  <div class="module-info">
+                    <strong> Web Security </strong>
+
+                    <span> Application Security </span>
+                  </div>
+
+                  <span class="module-status"> STUDY </span>
+                </div>
+
+                <!-- OWASP -->
+
+                <div class="module-item">
+                  <div class="module-icon">
+                    <i class="fa-solid fa-bug"></i>
+                  </div>
+
+                  <div class="module-info">
+                    <strong> OWASP </strong>
+
+                    <span> Vulnerability Research </span>
+                  </div>
+
+                  <span class="module-status"> STUDY </span>
+                </div>
+
+                <!-- PYTHON -->
+
+                <div class="module-item">
+                  <div class="module-icon">
+                    <i class="fa-brands fa-python"></i>
+                  </div>
+
+                  <div class="module-info">
+                    <strong> Python </strong>
+
+                    <span> Security Automation </span>
+                  </div>
+
+                  <span class="module-status"> STUDY </span>
+                </div>
+
+                <!-- PENTEST -->
+
+                <div class="module-item">
+                  <div class="module-icon">
+                    <i class="fa-solid fa-user-secret"></i>
+                  </div>
+
+                  <div class="module-info">
+                    <strong> Ethical Hacking </strong>
+
+                    <span> Authorized Testing </span>
+                  </div>
+
+                  <span class="module-status future"> FUTURE </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 NETWORK ACTIVITY
+                 ================================================= -->
+
+            <div class="network-panel">
+              <div class="dashboard-panel-header">
+                <div>
+                  <span> NETWORK ACTIVITY </span>
+
+                  <small> REAL-TIME SIMULATION </small>
+                </div>
+
+                <span class="network-live"> ● LIVE </span>
+              </div>
+
+              <!-- GRAPH -->
+
+              <div class="network-graph">
+                <div class="graph-grid"></div>
+
+                <svg
+                  class="network-chart"
+                  viewBox="0 0 700 260"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <linearGradient
+                      id="networkGradient"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="#22d3ee"
+                        stop-opacity=".25"
+                      />
+
+                      <stop
+                        offset="100%"
+                        stop-color="#22d3ee"
+                        stop-opacity="0"
+                      />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- AREA -->
+
+                  <path
+                    class="chart-area"
+                    d="
+                            M0 210
+                            L45 190
+                            L90 200
+                            L135 145
+                            L180 165
+                            L225 115
+                            L270 135
+                            L315 80
+                            L360 125
+                            L405 105
+                            L450 145
+                            L495 70
+                            L540 95
+                            L585 55
+                            L630 85
+                            L700 45
+                            L700 260
+                            L0 260
+                            Z
+                            "
+                  ></path>
+
+                  <!-- LINE -->
+
+                  <path
+                    class="chart-line"
+                    d="
+                            M0 210
+                            L45 190
+                            L90 200
+                            L135 145
+                            L180 165
+                            L225 115
+                            L270 135
+                            L315 80
+                            L360 125
+                            L405 105
+                            L450 145
+                            L495 70
+                            L540 95
+                            L585 55
+                            L630 85
+                            L700 45
+                            "
+                  ></path>
+                </svg>
+
+                <!-- SCAN LINE -->
+
+                <div class="graph-scan"></div>
+              </div>
+
+              <!-- NETWORK DATA -->
+
+              <div class="network-data">
+                <div>
+                  <span> PACKETS </span>
+
+                  <strong id="packets-value"> 14,283 </strong>
+                </div>
+
+                <div>
+                  <span> TRAFFIC </span>
+
+                  <strong id="traffic-value"> 2.84 GB </strong>
+                </div>
+
+                <div>
+                  <span> CONNECTIONS </span>
+
+                  <strong id="connections-value"> 128 </strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+             SECURITY LOG
+             ================================================= -->
+
+          <div class="security-log">
+            <div class="dashboard-panel-header">
+              <div>
+                <span> SECURITY LOG </span>
+
+                <small> SYSTEM EVENTS </small>
+              </div>
+
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+
+            <div class="log-container" id="security-log-container">
+              <div class="log-entry">
+                <span class="log-time"> 09:31:22 </span>
+
+                <span class="log-type success"> [OK] </span>
+
+                <span class="log-message"> Network integrity verified </span>
+              </div>
+
+              <div class="log-entry">
+                <span class="log-time"> 09:31:18 </span>
+
+                <span class="log-type success"> [OK] </span>
+
+                <span class="log-message"> Security protocols active </span>
+              </div>
+
+              <div class="log-entry">
+                <span class="log-time"> 09:31:04 </span>
+
+                <span class="log-type info"> [INFO] </span>
+
+                <span class="log-message">
+                  Orbital monitoring initialized
+                </span>
+              </div>
+
+              <div class="log-entry">
+                <span class="log-time"> 09:30:51 </span>
+
+                <span class="log-type success"> [OK] </span>
+
+                <span class="log-message">
+                  SAT-SEC communication established
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     SECURITY LAB
+     ===================================================== -->
+
+      <section class="security-lab" id="security-lab">
+        <div class="container">
+          <div class="security-lab-header">
+            <div>
+              <span class="security-section-label">
+                <i class="fa-solid fa-flask"></i>
+                SATURNO // SECURITY LAB
+              </span>
+
+              <h2>Security <strong>Lab</strong></h2>
+
+              <p>
+                Ferramentas práticas para análise, exploração controlada e
+                aprendizado em segurança digital.
+              </p>
+            </div>
+
+            <div class="lab-local-status">
+              <span class="lab-status-dot"></span>
+
+              <div>
+                <span>PROCESSING MODE</span>
+                <strong>LOCAL</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="security-lab-grid">
+            <article class="lab-tool-card lab-tool-card-action" data-open-password tabindex="0" role="button" aria-label="Abrir Password Analyzer">
+              <div class="lab-tool-top">
+                <span class="lab-tool-index">01</span>
+                <span class="lab-tool-status">READY</span>
+              </div>
+
+              <div class="lab-tool-icon">
+                <i class="fa-solid fa-key"></i>
+              </div>
+
+              <h3>Password <strong>Analyzer</strong></h3>
+
+              <p>
+                Avalie força, comprimento, complexidade e entropia de uma
+                senha sem enviá-la para um servidor.
+              </p>
+
+              <div class="lab-tool-tags">
+                <span>LOCAL</span>
+                <span>ENTROPY</span>
+                <span>STRENGTH</span>
+              </div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-hash tabindex="0" role="button" aria-label="Abrir Hash Generator">
+              <div class="lab-tool-top">
+                <span class="lab-tool-index">02</span>
+                <span class="lab-tool-status">READY</span>
+              </div>
+
+              <div class="lab-tool-icon">
+                <i class="fa-solid fa-hashtag"></i>
+              </div>
+
+              <h3>Hash <strong>Generator</strong></h3>
+
+              <p>
+                Gere hashes criptográficos usando a Web Crypto API diretamente
+                no navegador.
+              </p>
+
+              <div class="lab-tool-tags">
+                <span>SHA-256</span>
+                <span>SHA-384</span>
+                <span>SHA-512</span>
+              </div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-jwt tabindex="0" role="button" aria-label="Abrir JWT Decoder">
+              <div class="lab-tool-top">
+                <span class="lab-tool-index">03</span>
+                <span class="lab-tool-status">READY</span>
+              </div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-key"></i></div>
+              <h3>JWT <strong>Decoder</strong></h3>
+              <p>Decodifique Header e Payload de JSON Web Tokens localmente, sem validar ou quebrar assinaturas.</p>
+              <div class="lab-tool-tags"><span>LOCAL</span><span>HEADER</span><span>PAYLOAD</span></div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-base64 tabindex="0" role="button" aria-label="Abrir Base64 Encoder Decoder">
+              <div class="lab-tool-top"><span class="lab-tool-index">04</span><span class="lab-tool-status">READY</span></div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Base64 <strong>Tool</strong></h3>
+              <p>Codifique e decodifique texto em Base64 com suporte a UTF-8 diretamente no navegador.</p>
+              <div class="lab-tool-tags"><span>LOCAL</span><span>UTF-8</span><span>ENCODE</span><span>DECODE</span></div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-ip tabindex="0" role="button" aria-label="Abrir IP e CIDR Calculator">
+              <div class="lab-tool-top"><span class="lab-tool-index">05</span><span class="lab-tool-status">READY</span></div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h3>IP / CIDR <strong>Calculator</strong></h3>
+              <p>Calcule rede, broadcast, faixa de hosts e capacidade de uma sub-rede IPv4 localmente.</p>
+              <div class="lab-tool-tags"><span>LOCAL</span><span>IPv4</span><span>CIDR</span><span>NETWORK</span></div>
+            </article>
+
+            <article class="lab-tool-card lab-tool-card-action" data-open-headers tabindex="0" role="button" aria-label="Abrir Security Scanner">
+              <div class="lab-tool-top"><span class="lab-tool-index">06</span><span class="lab-tool-status">READY</span></div>
+              <div class="lab-tool-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3>Security <strong>Scanner</strong></h3>
+              <p>Revise headers, HTTPS, políticas CORS, HTML e registros DNS com verificações passivas.</p>
+              <div class="lab-tool-tags"><span>PASSIVE</span><span>HTTP</span><span>DNS</span><span>LOCAL</span></div>
+            </article>
+          </div>
+
+          <div class="jwt-decoder-panel" id="jwt-decoder-panel" hidden>
+            <div class="jwt-decoder-head">
+              <div><span class="lab-tool-index">03 // DECODER</span><h3>JWT <strong>Decoder</strong></h3></div>
+              <button class="lab-close-btn" type="button" data-close-jwt aria-label="Fechar JWT Decoder"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="jwt-input-wrap">
+              <div class="jwt-input-meta"><label for="jwt-lab-input">JSON Web Token</label><span id="jwt-char-count">0 caracteres</span></div>
+              <textarea id="jwt-lab-input" rows="7" spellcheck="false" placeholder="Cole um JWT no formato header.payload.signature..."></textarea>
+            </div>
+            <div class="jwt-actions">
+              <button type="button" class="jwt-decode-btn" id="jwt-decode-btn"><i class="fa-solid fa-code"></i> DECODE JWT</button>
+              <button type="button" class="jwt-clear-btn" id="jwt-clear-btn"><i class="fa-solid fa-eraser"></i> CLEAR</button>
+            </div>
+            <div class="jwt-status" id="jwt-status" aria-live="polite">Os dados permanecem no navegador.</div>
+            <div class="jwt-output-grid">
+              <div class="jwt-output-block"><div class="jwt-output-title"><span>HEADER</span><span id="jwt-header-status">WAITING</span></div><pre id="jwt-header-output">Aguardando token...</pre></div>
+              <div class="jwt-output-block"><div class="jwt-output-title"><span>PAYLOAD</span><span id="jwt-payload-status">WAITING</span></div><pre id="jwt-payload-output">Aguardando token...</pre></div>
+            </div>
+            <div class="jwt-signature-block"><div class="jwt-output-title"><span>SIGNATURE</span><span id="jwt-signature-status">NOT VERIFIED</span></div><code id="jwt-signature-output">A assinatura é exibida apenas para referência.</code></div>
+          </div>
+
+          <div class="password-analyzer-panel" id="password-analyzer-panel" hidden>
+            <div class="password-analyzer-head">
+              <div>
+                <span class="lab-tool-index">01 // ANALYZER</span>
+                <h3>Password <strong>Analyzer</strong></h3>
+              </div>
+              <button class="lab-close-btn" type="button" data-close-password aria-label="Fechar Password Analyzer">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="password-input-wrap">
+              <label for="password-lab-input">Digite uma senha para analisar</label>
+              <div class="password-input-row">
+                <input id="password-lab-input" type="password" autocomplete="off" spellcheck="false" placeholder="Digite uma senha...">
+                <button type="button" class="password-toggle-btn" data-toggle-password aria-label="Mostrar senha">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="password-score-block">
+              <div class="password-score-meta">
+                <span>SECURITY SCORE</span>
+                <strong id="password-score">0 / 100</strong>
+              </div>
+              <div class="password-score-bar"><span id="password-score-fill"></span></div>
+              <div class="password-strength-row">
+                <span id="password-strength">AGUARDANDO INPUT</span>
+                <span id="password-entropy">Entropy: 0 bits</span>
+              </div>
+            </div>
+
+            <div class="password-metrics" aria-live="polite">
+              <div class="password-metric"><span>Length</span><strong id="metric-length">0</strong></div>
+              <div class="password-metric"><span>Uppercase</span><strong id="metric-upper">✕</strong></div>
+              <div class="password-metric"><span>Lowercase</span><strong id="metric-lower">✕</strong></div>
+              <div class="password-metric"><span>Numbers</span><strong id="metric-number">✕</strong></div>
+              <div class="password-metric"><span>Symbols</span><strong id="metric-symbol">✕</strong></div>
+            </div>
+
+            <div class="password-feedback" id="password-feedback">Digite uma senha para iniciar a análise.</div>
+          </div>
+
+          <div class="hash-generator-panel" id="hash-generator-panel" hidden>
+            <div class="hash-generator-head">
+              <div>
+                <span class="lab-tool-index">02 // GENERATOR</span>
+                <h3>Hash <strong>Generator</strong></h3>
+              </div>
+              <button class="lab-close-btn" type="button" data-close-hash aria-label="Fechar Hash Generator">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="hash-input-wrap">
+              <div class="hash-input-meta">
+                <label for="hash-lab-input">Texto para gerar o hash</label>
+                <span id="hash-char-count">0 caracteres</span>
+              </div>
+              <textarea id="hash-lab-input" rows="5" spellcheck="false" placeholder="Digite ou cole um texto..."></textarea>
+            </div>
+
+            <div class="hash-controls">
+              <label for="hash-algorithm">ALGORITHM</label>
+              <select id="hash-algorithm">
+                <option value="SHA-256">SHA-256</option>
+                <option value="SHA-384">SHA-384</option>
+                <option value="SHA-512">SHA-512</option>
+              </select>
+              <button type="button" class="hash-generate-btn" id="hash-generate-btn">
+                <i class="fa-solid fa-bolt"></i> GENERATE HASH
+              </button>
+            </div>
+
+            <div class="hash-result-block">
+              <div class="hash-result-meta">
+                <span id="hash-result-label">SHA-256 OUTPUT</span>
+                <button type="button" class="hash-copy-btn" id="hash-copy-btn" disabled>
+                  <i class="fa-regular fa-copy"></i> COPY
+                </button>
+              </div>
+              <code id="hash-result">Aguardando entrada...</code>
+            </div>
+            <div class="hash-feedback" id="hash-feedback" aria-live="polite">Os dados permanecem no navegador.</div>
+          </div>
+
+            </div>
+
+            <div class="base64-tool-panel" id="base64-tool-panel" hidden>
+              <div class="base64-tool-head"><div><span class="lab-tool-index">04 // ENCODER / DECODER</span><h3>Base64 <strong>Tool</strong></h3></div><button class="lab-close-btn" type="button" data-close-base64 aria-label="Fechar Base64 Tool"><i class="fa-solid fa-xmark"></i></button></div>
+              <div class="base64-mode-row" role="group" aria-label="Modo Base64"><button type="button" class="base64-mode-btn is-active" data-base64-mode="encode">ENCODE</button><button type="button" class="base64-mode-btn" data-base64-mode="decode">DECODE</button></div>
+              <div class="base64-input-wrap"><div class="base64-input-meta"><label for="base64-lab-input">Texto de entrada</label><span id="base64-char-count">0 caracteres</span></div><textarea id="base64-lab-input" rows="6" spellcheck="false" placeholder="Digite o texto que deseja codificar..."></textarea></div>
+              <div class="base64-actions"><button type="button" class="base64-run-btn" id="base64-run-btn"><i class="fa-solid fa-bolt"></i> ENCODE</button><button type="button" class="base64-clear-btn" id="base64-clear-btn"><i class="fa-solid fa-eraser"></i> CLEAR</button></div>
+              <div class="base64-result-block"><div class="base64-result-meta"><span id="base64-result-label">BASE64 OUTPUT</span><button type="button" class="base64-copy-btn" id="base64-copy-btn" disabled><i class="fa-regular fa-copy"></i> COPY</button></div><code id="base64-result">Aguardando entrada...</code></div>
+              <div class="base64-feedback" id="base64-feedback" aria-live="polite">Os dados permanecem no navegador.</div>
+          </div>
+
+          <div class="ip-calculator-panel" id="ip-calculator-panel" hidden>
+            <div class="ip-calculator-head">
+              <div><span class="lab-tool-index">05 // NETWORK TOOL</span><h3>IP / CIDR <strong>Calculator</strong></h3></div>
+              <button class="lab-close-btn" type="button" data-close-ip aria-label="Fechar IP / CIDR Calculator"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="ip-input-wrap">
+              <div class="ip-input-meta"><label for="ip-lab-input">IPv4 address / CIDR</label><span id="ip-input-status">Ex.: 192.168.1.10/24</span></div>
+              <div class="ip-input-row">
+                <input id="ip-lab-input" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="192.168.1.10/24">
+                <button type="button" class="ip-calculate-btn" id="ip-calculate-btn"><i class="fa-solid fa-calculator"></i> CALCULATE</button>
+              </div>
+            </div>
+
+            <div class="ip-presets" aria-label="Exemplos rápidos">
+              <button type="button" data-ip-preset="192.168.1.10/24">192.168.1.10/24</button>
+              <button type="button" data-ip-preset="10.0.0.15/16">10.0.0.15/16</button>
+              <button type="button" data-ip-preset="172.16.5.20/28">172.16.5.20/28</button>
+            </div>
+
+            <div class="ip-status" id="ip-status" aria-live="polite">Digite um IPv4 com CIDR para iniciar o cálculo.</div>
+
+            <div class="ip-result-grid" aria-live="polite">
+              <div class="ip-result-card"><span>NETWORK</span><strong id="ip-network">—</strong></div>
+              <div class="ip-result-card"><span>BROADCAST</span><strong id="ip-broadcast">—</strong></div>
+              <div class="ip-result-card"><span>FIRST HOST</span><strong id="ip-first-host">—</strong></div>
+              <div class="ip-result-card"><span>LAST HOST</span><strong id="ip-last-host">—</strong></div>
+              <div class="ip-result-card"><span>SUBNET MASK</span><strong id="ip-mask">—</strong></div>
+              <div class="ip-result-card"><span>HOSTS</span><strong id="ip-host-count">—</strong></div>
+            </div>
+
+            <div class="ip-detail-row">
+              <div><span>CIDR</span><strong id="ip-cidr">—</strong></div>
+              <div><span>TOTAL ADDRESSES</span><strong id="ip-total">—</strong></div>
+              <div><span>WILDCARD</span><strong id="ip-wildcard">—</strong></div>
+            </div>
+
+            <div class="ip-calculator-actions">
+              <button type="button" class="ip-clear-btn" id="ip-clear-btn"><i class="fa-solid fa-eraser"></i> CLEAR</button>
+            </div>
+          </div>
+
+          <div class="security-headers-panel" id="security-headers-panel" hidden>
+            <div class="scanner-hero">
+              <div class="security-headers-head">
+                <div><span class="lab-tool-index">SATURNO SECURITY // PASSIVE WEB REVIEW</span><h3>Security <strong>Scanner</strong></h3>
+                  <p>Analise configurações de segurança, políticas HTTP e exposição de informações de websites.</p>
+                </div>
+                <button class="lab-close-btn" type="button" data-close-headers aria-label="Fechar Security Scanner"><i class="fa-solid fa-xmark"></i></button>
+              </div>
+              <div class="scanner-indicators"><span><i class="fa-solid fa-link"></i> Análise de URL</span><span><i class="fa-solid fa-shield-halved"></i> Headers HTTP</span><span><i class="fa-solid fa-laptop"></i> Processamento local</span><span class="scanner-tool-status"><i></i> Scanner ativo</span></div>
+            </div>
+            <div class="headers-mode-row" role="group" aria-label="Método de análise">
+              <button type="button" class="headers-mode-btn is-active" data-headers-mode="url">ANALISAR URL</button>
+              <button type="button" class="headers-mode-btn" data-headers-mode="manual">COLAR HEADERS</button>
+            </div>
+            <div class="headers-url-panel" data-headers-view="url">
+              <div class="headers-input-meta"><label for="headers-url-input">URL pública do website</label><span>Somente requisição GET passiva</span></div>
+              <div class="headers-input-row"><input id="headers-url-input" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="https://example.com" aria-describedby="headers-status"><button type="button" class="headers-analyze-btn" id="headers-analyze-btn"><i class="fa-solid fa-magnifying-glass"></i> ANALISAR</button></div>
+              <div class="scanner-history" id="scanner-history" hidden><span>ANÁLISES RECENTES</span><div id="scanner-history-list"></div><button type="button" id="scanner-history-clear">Limpar histórico</button></div>
+            </div>
+            <div class="headers-manual-panel" data-headers-view="manual" hidden>
+              <div class="headers-input-meta"><label for="headers-manual-input">Headers da resposta HTTP</label><span>A análise permanece neste navegador</span></div>
+              <textarea id="headers-manual-input" rows="8" spellcheck="false" placeholder="Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: default-src 'self'
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin"></textarea>
+              <div class="headers-manual-actions"><button type="button" class="headers-analyze-btn" id="headers-manual-analyze-btn"><i class="fa-solid fa-list-check"></i> ANALISAR HEADERS</button><button type="button" class="headers-clear-btn" id="headers-clear-btn"><i class="fa-solid fa-eraser"></i> LIMPAR</button></div>
+            </div>
+            <div class="headers-status" id="headers-status" aria-live="polite" role="status">Escolha um método para iniciar a análise.</div>
+            <div class="scanner-results-area" id="scanner-results-area" hidden>
+              <div class="scanner-report-top"><div><span class="lab-tool-index">RELATÓRIO DE ANÁLISE</span><p id="scanner-report-meta"></p></div><div class="scanner-report-actions"><button type="button" id="scanner-copy-report"><i class="fa-regular fa-copy"></i> Copiar</button><button type="button" id="scanner-export-json"><i class="fa-solid fa-download"></i> JSON</button><button type="button" id="scanner-print-report"><i class="fa-solid fa-file-pdf"></i> PDF / Imprimir</button></div></div>
+              <div class="headers-summary" id="headers-summary"><div><span>APROVADAS</span><strong id="headers-secure-count">0</strong></div><div><span>ATENÇÃO</span><strong id="headers-review-count">0</strong></div><div><span>AUSENTES</span><strong id="headers-missing-count">0</strong></div><div><span>NÃO VERIFICÁVEIS</span><strong id="headers-unverifiable-count">0</strong></div><div class="scanner-score-card"><span>PONTUAÇÃO*</span><strong id="headers-score">—</strong></div></div>
+              <p class="scanner-score-note">*Nota calculada apenas com verificações observáveis, ponderadas por relevância. Itens não verificáveis são excluídos.</p>
+              <div class="headers-results" id="headers-results" aria-live="polite"></div>
+              <div class="scanner-config-guide"><details><summary>Exemplos de correção por hospedagem</summary><div class="scanner-config-tabs"><details><summary>Vercel</summary><pre><code>{
+  "headers": [{ "source": "/(.*)", "headers": [
+    { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
+    { "key": "X-Content-Type-Options", "value": "nosniff" },
+    { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+    { "key": "Content-Security-Policy", "value": "default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'" }
+  ] }]
+}</code></pre></details><details><summary>Netlify</summary><pre><code>/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'</code></pre></details><details><summary>Nginx</summary><pre><code>add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+add_header Content-Security-Policy "default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'" always;
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;</code></pre></details><details><summary>Apache</summary><pre><code>&lt;IfModule mod_headers.c&gt;
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Content-Security-Policy "default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+&lt;/IfModule&gt;</code></pre></details></div><p>Adapte CSP às origens e recursos legítimos do site antes de publicar; políticas restritivas podem interromper funcionalidades.</p></details></div>
+            </div>
+            <div class="headers-note"><i class="fa-solid fa-circle-info"></i><span>O navegador limita CORS, headers expostos, cookies e detalhes TLS. O scanner não executa conteúdo do alvo, não contorna CORS e não faz exploração. DNS público usa DNS over HTTPS da Cloudflare.</span></div>
+          </div>
+
+          <div class="security-lab-footer">
+            <i class="fa-solid fa-lock"></i>
+            <span>Análise local; consultas DNS via Cloudflare DoH e histórico somente neste navegador.</span>
+            <span class="lab-footer-code">SAT-SEC // LAB-01</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     SECURITY ARSENAL
+     ===================================================== -->
+
+      <section class="security-arsenal" id="security-arsenal">
+        <div class="container">
+          <div class="arsenal-header">
+            <div>
+              <span class="security-section-label">
+                <i class="fa-solid fa-shield-halved"></i>
+                SATURNO // SECURITY ARSENAL
+              </span>
+
+              <h2>Security <strong>Skills</strong></h2>
+
+              <p>
+                Tecnologias e fundamentos que fazem parte da minha jornada em
+                CyberSecurity.
+              </p>
+            </div>
+
+            <div class="arsenal-status">
+              <span class="arsenal-status-dot"></span>
+
+              <div>
+                <span>ARSENAL STATUS</span>
+                <strong>ONLINE</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="arsenal-grid">
+            <!-- LINUX -->
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon">
+                  <i class="fa-brands fa-linux"></i>
+                </div>
+
+                <div class="skill-info">
+                  <span>01</span>
+
+                  <h3>Linux</h3>
+
+                  <p>Sistemas, terminal e administração.</p>
+                </div>
+
+                <strong class="skill-percent"> 10% </strong>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="10"></div>
+              </div>
+
+              <div class="skill-footer">
+                <span>FOUNDATION</span>
+                <span>ACTIVE</span>
+              </div>
+            </div>
+
+            <!-- NETWORKING -->
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+
+                <div class="skill-info">
+                  <span>02</span>
+
+                  <h3>Networking</h3>
+
+                  <p>Redes, protocolos e comunicação.</p>
+                </div>
+
+                <strong class="skill-percent"> 10% </strong>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="10"></div>
+              </div>
+
+              <div class="skill-footer">
+                <span>NETWORK</span>
+                <span>ACTIVE</span>
+              </div>
+            </div>
+
+            <!-- WEB SECURITY -->
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <div class="skill-info">
+                  <span>03</span>
+
+                  <h3>Web Security</h3>
+
+                  <p>Segurança de aplicações web.</p>
+                </div>
+
+                <strong class="skill-percent"> 25% </strong>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="25"></div>
+              </div>
+
+              <div class="skill-footer">
+                <span>APPLICATION</span>
+                <span>ACTIVE</span>
+              </div>
+            </div>
+
+            <!-- OWASP -->
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon">
+                  <i class="fa-solid fa-bug"></i>
+                </div>
+
+                <div class="skill-info">
+                  <span>04</span>
+
+                  <h3>OWASP</h3>
+
+                  <p>Vulnerabilidades e segurança web.</p>
+                </div>
+
+                <strong class="skill-percent"> 25% </strong>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="25"></div>
+              </div>
+
+              <div class="skill-footer">
+                <span>SECURITY</span>
+                <span>ACTIVE</span>
+              </div>
+            </div>
+
+            <!-- PYTHON -->
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+
+                <div class="skill-info">
+                  <span>05</span>
+
+                  <h3>Python</h3>
+
+                  <p>Automação e scripts de segurança.</p>
+                </div>
+
+                <strong class="skill-percent"> 30% </strong>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="30"></div>
+              </div>
+
+              <div class="skill-footer">
+                <span>AUTOMATION</span>
+                <span>ACTIVE</span>
+              </div>
+            </div>
+
+            <!-- ETHICAL HACKING -->
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon">
+                  <i class="fa-solid fa-user-secret"></i>
+                </div>
+
+                <div class="skill-info">
+                  <span>06</span>
+
+                  <h3>Ethical Hacking</h3>
+
+                  <p>Pentest e análise de vulnerabilidades.</p>
+                </div>
+
+                <strong class="skill-percent"> 25% </strong>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="25"></div>
+              </div>
+
+              <div class="skill-footer">
+                <span>PENTEST</span>
+                <span>LEARNING</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arsenal-footer">
+            <i class="fa-solid fa-satellite"></i>
+
+            <span> SATTURNО SECURITY // KNOWLEDGE MATRIX </span>
+
+            <i class="fa-solid fa-satellite"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+     SATURNO SECURITY TERMINAL
+     ===================================================== -->
+
+      <section class="security-terminal-section" id="security-terminal">
+        <div class="container">
+          <div class="terminal-section-header">
+            <span class="security-section-label">
+              <i class="fa-solid fa-terminal"></i>
+              SATURNO // SECURE TERMINAL
+            </span>
+
+            <h2>Interactive <strong>Terminal</strong></h2>
+
+            <p>
+              Explore o ambiente Saturno Security através de comandos
+              interativos.
+            </p>
+          </div>
+
+          <!-- TERMINAL -->
+
+          <div class="saturno-terminal">
+            <!-- TERMINAL HEADER -->
+
+            <div class="terminal-header">
+              <div class="terminal-controls">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+
+              <div class="terminal-title">
+                <i class="fa-solid fa-shield-halved"></i>
+
+                SATURNO@SECURITY
+              </div>
+
+              <div class="terminal-status">
+                <span></span>
+
+                SECURE
+              </div>
+            </div>
+
+            <!-- TERMINAL BODY -->
+
+            <div class="terminal-body" id="terminal-output" aria-live="polite">
+              <div class="terminal-welcome">
+                <div>SATURNO SECURITY TERMINAL v1.0</div>
+
+                <div>Secure environment initialized.</div>
+
+                <div>
+                  Type
+                  <span class="terminal-highlight"> help </span>
+                  to see available commands.
+                </div>
+
+                <br />
+              </div>
+            </div>
+
+            <!-- TERMINAL INPUT -->
+
+            <form class="terminal-input-area" id="terminal-form">
+              <label for="terminal-input" class="terminal-prompt">
+                SATURNO@SECURITY:~$
+              </label>
+
+              <input
+                type="text"
+                id="terminal-input"
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Terminal command"
+                placeholder="Digite um comando..."
+              />
+            </form>
+          </div>
+
+          <!-- TERMINAL HELP -->
+
+          <div class="terminal-hint">
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span> Digite <strong>help</strong> para começar. </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE CYBERSECURITY -->
+      <section class="security-about" id="about-security">
+        <div class="container">
+          <div class="section-title">
+            <span>
+              <i class="fa-solid fa-lock"></i>
+              Minha jornada
+            </span>
+
+            <h2>
+              Explorando o mundo da
+              <strong>CyberSecurity.</strong>
+            </h2>
+          </div>
+
+          <div class="security-about-grid">
+            <div class="security-about-text">
+              <p>
+                CyberSecurity é uma área que estou explorando e desenvolvendo
+                gradualmente dentro da minha formação em tecnologia.
+              </p>
+
+              <p>
+                Meu objetivo é compreender como sistemas, aplicações, redes e
+                dados podem ser protegidos contra diferentes tipos de ameaças.
+              </p>
+
+              <p>
+                Esta página será utilizada para documentar meus estudos,
+                projetos, ferramentas e minha evolução na área.
+              </p>
+            </div>
+
+            <div class="security-terminal">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <span>security@gustavo:~</span>
+              </div>
+
+              <div class="terminal-content">
+                <p>
+                  <span class="terminal-green"> gustavo@security </span>:~$
+                  whoami
+                </p>
+
+                <p>Estudante de CyberSecurity</p>
+
+                <p>
+                  <span class="terminal-green"> gustavo@security </span>:~$
+                  status
+                </p>
+
+                <p>[ IN DEVELOPMENT ]</p>
+
+                <p>
+                  <span class="terminal-green"> gustavo@security </span>:~$ _
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ÁREAS DE ESTUDO -->
+      <section class="security-areas">
+        <div class="container">
+          <div class="section-title">
+            <span>
+              <i class="fa-solid fa-crosshairs"></i>
+              Áreas de estudo
+            </span>
+
+            <h2>
+              Fundamentos que estou
+              <strong>explorando.</strong>
+            </h2>
+          </div>
+
+          <div class="security-cards">
+            <!-- Linux -->
+            <article class="security-card">
+              <div class="security-card-icon">
+                <i class="fa-brands fa-linux"></i>
+              </div>
+
+              <h3>Linux</h3>
+
+              <p>
+                Sistemas Linux, terminal, permissões, processos e administração
+                de sistemas.
+              </p>
+
+              <span class="security-status"> Em estudo </span>
+            </article>
+
+            <!-- Redes -->
+            <article class="security-card">
+              <div class="security-card-icon">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+
+              <h3>Redes</h3>
+
+              <p>
+                TCP/IP, protocolos, portas, DNS, HTTP, infraestrutura e
+                comunicação entre sistemas.
+              </p>
+
+              <span class="security-status"> Em estudo </span>
+            </article>
+
+            <!-- Segurança Web -->
+            <article class="security-card">
+              <div class="security-card-icon">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+
+              <h3>Segurança Web</h3>
+
+              <p>
+                Conceitos de aplicações web seguras, autenticação, sessões e
+                vulnerabilidades.
+              </p>
+
+              <span class="security-status"> Em estudo </span>
+            </article>
+
+            <!-- OWASP -->
+            <article class="security-card">
+              <div class="security-card-icon">
+                <i class="fa-solid fa-bug"></i>
+              </div>
+
+              <h3>OWASP</h3>
+
+              <p>
+                Estudo das principais vulnerabilidades e boas práticas de
+                segurança para aplicações.
+              </p>
+
+              <span class="security-status"> Em estudo </span>
+            </article>
+
+            <!-- Python -->
+            <article class="security-card">
+              <div class="security-card-icon">
+                <i class="fa-brands fa-python"></i>
+              </div>
+
+              <h3>Python</h3>
+
+              <p>
+                Automação, scripts e desenvolvimento de ferramentas para
+                segurança.
+              </p>
+
+              <span class="security-status"> Em estudo </span>
+            </article>
+
+            <!-- Ethical Hacking -->
+            <article class="security-card">
+              <div class="security-card-icon">
+                <i class="fa-solid fa-user-secret"></i>
+              </div>
+
+              <h3>Ethical Hacking</h3>
+
+              <p>
+                Fundamentos de testes de segurança, reconhecimento e análise de
+                vulnerabilidades em ambientes autorizados.
+              </p>
+
+              <span class="security-status"> Futuro </span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="security-projects" id="security-projects">
+        <div class="container">
+          <div class="section-title">
+            <span>
+              <i class="fa-solid fa-code"></i>
+              Projetos
+            </span>
+
+            <h2>
+              CyberSecurity na
+              <strong>prática.</strong>
+            </h2>
+          </div>
+
+          <div class="projects-empty">
+            <i class="fa-solid fa-terminal"></i>
+
+            <h3>Projetos em desenvolvimento</h3>
+
+            <p>
+              Novos projetos relacionados à segurança, automação e
+              infraestrutura serão adicionados aqui conforme minha evolução nos
+              estudos.
+            </p>
+
+            <span> &gt; coming_soon </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SATURNO SECURITY -->
+      <section class="saturno-security">
+        <div class="container">
+          <div class="saturno-security-content">
+            <div class="saturno-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <span class="saturno-label"> PROJETO FUTURO </span>
+
+            <h2>
+              Saturno
+              <strong>Security</strong>
+            </h2>
+
+            <p>
+              Um projeto voltado à CyberSecurity, automação e desenvolvimento de
+              soluções para segurança digital.
+            </p>
+
+            <span class="saturno-status">
+              <i class="fa-solid fa-circle"></i>
+              Em desenvolvimento
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Gustavo Gomes. Todos os direitos reservados.</p>
+
+        <a href="index.html">
+          Voltar ao portfólio
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- JavaScript exclusivo da página -->
+    <script src="assets/js/cybersecurity.js?v=20261030-scanner"></script>
+    <script src="assets/js/security-scanner.js?v=20261030-scanner"></script>
+    <a class="whatsapp-float" href="https://wa.me/5511973875504?text=Ol%C3%A1%2C%20Gustavo!%20Vim%20pelo%20seu%20portf%C3%B3lio." target="_blank" rel="noopener noreferrer" aria-label="Tirar dúvidas ou conversar pelo WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      <span>Fale comigo</span>
+    </a>
+  </body>
+</html>
